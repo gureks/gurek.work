@@ -1,0 +1,31 @@
+@use 'tokens' as *;
+
+// Section spacing per Figma (80px vertical, 40px horizontal container side padding applied via layout)
+.reads-section { padding: 80px 40px; position: relative; }
+.reads-section__header { display: flex; flex-direction: column; align-items: center; margin-bottom: 40px; }
+
+// Title styling: serif italic (44px) then sans (40px)
+.reads-section__title { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; justify-content: center; line-height: 1; }
+.reads-title__serif { font-family: $font-serif-news; font-size: 44px; font-style: italic; font-weight: 300; letter-spacing: 0; }
+.reads-title__sans { font-family: $font-sans-geom; font-size: 40px; font-weight: 400; letter-spacing: -2px; }
+.reads-title__icon { width: 44px; height: 40px; display: flex; align-items: center; justify-content: center; img { width: 100%; height: 100%; object-fit: contain; } }
+
+// Marquee container (340px high including 32px vertical padding around 276px tiles)
+.reads-marquee { position: relative; height: 340px; display: flex; align-items: center; justify-content: center; }
+.reads-marquee__mask { position: relative; width: 1152px; height: 340px; padding: 32px 0; mask-image: url('../assets/a1e4bdcc41dfec88f69cab9665eb9d2726044a65.svg'); -webkit-mask-image: url('../assets/a1e4bdcc41dfec88f69cab9665eb9d2726044a65.svg'); mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat; mask-size: 1152px 340px; -webkit-mask-size: 1152px 340px; overflow: hidden; }
+.reads-marquee__track { display: flex; gap: 40px; animation: reads-marquee 60s linear infinite; will-change: transform; }
+
+// Cover tile (180 x 276)
+.reads-cover { width: 180px; height: 276px; border-radius: 16px; position: relative; flex-shrink: 0; overflow: hidden; transition: transform .8s cubic-bezier(.25,.6,.3,1), box-shadow .6s ease; }
+.reads-cover picture, .reads-cover img { display: block; width: 100%; height: 100%; }
+.reads-cover img { object-fit: cover; }
+.reads-cover::after { content: ''; position: absolute; inset: 0; border: 1px solid $color-background; border-radius: 16px; pointer-events: none; }
+.reads-cover:hover { transform: translateY(-6px); box-shadow: 0 8px 24px -8px rgba(0,0,0,0.4); }
+
+@keyframes reads-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .reads-marquee__track { animation: none; }
+  .reads-cover { transition: box-shadow .3s ease; }
+  .reads-cover:hover { transform: none; }
+}

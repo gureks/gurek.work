@@ -1,0 +1,27 @@
+@use 'tokens' as *;
+
+/* Theming system: apply [data-theme="light"] on <html> or body */
+/* Dark (default) uses base token custom properties */
+
+:root[data-theme='light'] {
+  --color-background: #ffffff;
+  --color-text-primary: #0f1117;
+  --color-text-secondary: #4a5568;
+  --color-surface: rgba(108,100,254,0.06);
+  --color-surface-glass: rgba(108,100,254,0.08);
+  --color-border-glass: rgba(108,100,254,0.18);
+  --color-tag-bg: rgba(0,0,0,0.04);
+  --color-tag-border: rgba(0,0,0,0.08);
+}
+
+/* Map CSS custom properties back to SCSS usage scope by layering utility classes */
+.theme-light {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+body[data-theme='light'] .surface-glass { background: var(--color-surface-glass); border-color: var(--color-border-glass); }
+body[data-theme='light'] .tag { background: var(--color-tag-bg); border-color: var(--color-tag-border); }
+
+/* Transition utility */
+.theme-transition { transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease; }

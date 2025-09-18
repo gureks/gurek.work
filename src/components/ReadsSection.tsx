@@ -1,0 +1,56 @@
+import React from 'react';
+import '../styles/global.scss';
+import { readsCarousel, READS_SECTION_ID, ReadItem } from '../data/reads';
+import { imgTicker } from '../imageManifest';
+import { useReveal } from '../hooks/useReveal';
+
+export const ReadsSection: React.FC = () => {
+  const ref = useReveal<HTMLDivElement>();
+  const { items } = readsCarousel;
+  // Duplicate items for seamless marquee
+  const sequence = [...items, ...items];
+  return (
+    <section className="reads-section" id={READS_SECTION_ID} aria-labelledby="reads-heading">
+      <header className="reads-section__header">
+        <h2 id="reads-heading" className="visually-hidden">Frameworks I read not just build</h2>
+        <p className="reads-section__title" aria-hidden="true">
+          <span className="reads-title__serif">Frameworks</span>
+          <span className="reads-title__serif">I</span>
+          <span className="reads-title__serif">Read</span>
+          <span className="reads-title__icon" aria-hidden="true">
+            <img src={imgTicker} alt="" />
+          </span>
+          <span className="reads-title__sans">Not</span>
+          <span className="reads-title__sans">Just</span>
+          <span className="reads-title__sans">Build</span>
+        </p>
+      </header>
+      <div ref={ref} className="reads-marquee reveal" aria-hidden="true">
+        <div className="reads-marquee__mask">
+          <div className="reads-marquee__track">
+            {sequence.map((item: ReadItem) => (
+              <div key={item.id} className="reads-cover">
+                <picture>
+                  {item.webp1x && item.webp2x && (
+                    <source srcSet={`${item.webp1x} 1x, ${item.webp2x} 2x`} type="image/webp" />
+                  )}
+                  <img
+                    src={item.png}
+                    srcSet={`${item.png} 1x`}
+                    width={180}
+                    height={276}
+                    loading="lazy"
+                    decoding="async"
+                    alt={item.alt || ''}
+                  />
+                </picture>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ReadsSection;

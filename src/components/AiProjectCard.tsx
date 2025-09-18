@@ -1,0 +1,85 @@
+import React from 'react';
+import '../styles/global.scss';
+import { imgArrow } from '../imageManifest';
+
+export interface AiProjectCardImageSpec {
+  src: string;
+  alt?: string;
+  rotation?: number; // degrees
+  className?: string;
+  /** Percentage or length for fine positioning (defaults 50%) */
+  top?: string;
+  left?: string;
+  /** Optional additional transforms applied after rotation */
+  scale?: number; // base scale (default 1)
+  translateX?: string; // e.g. '4%' or '8px'
+  translateY?: string;
+  // layering & hover deltas
+  zIndex?: number;
+  hoverScale?: number;
+  hoverTranslateX?: string;
+  hoverTranslateY?: string;
+  hoverRotate?: number;
+}
+
+export interface AiProjectCardProps {
+  variant?: 'accent-1' | 'accent-2' | 'accent-3';
+  title: string;
+  description: string;
+  images: AiProjectCardImageSpec[];
+  accent?: 'brand-accent-1' | 'brand-accent-3' | 'primary';
+}
+
+const accentClass: Record<string, string> = {
+  'brand-accent-1': 'ai-project-card--accent-1',
+  'brand-accent-3': 'ai-project-card--accent-3',
+  'primary': 'ai-project-card--accent-primary'
+};
+
+export const AiProjectCard: React.FC<AiProjectCardProps> = ({
+  title,
+  description,
+  images,
+  accent = 'primary'
+}) => {
+  const classes = ['ai-project-card', accentClass[accent]].join(' ');
+  return (
+    <div className={classes}>
+      <div className="ai-project-card__head">
+        <h3 className="h-card-title ai-project-card__title">{title}</h3>
+        <div className="ai-project-card__icon" aria-hidden="true">
+          <img src={imgArrow} alt="" loading="lazy" />
+        </div>
+      </div>
+      <p className="ai-project-card__desc text-label text-secondary">{description}</p>
+      <div className="ai-project-card__images" aria-hidden="true">
+        {images.map((img, i) => {
+          const { rotation = 0, scale = 1, translateX = '0', translateY = '0' } = img;
+          // Extend style with CSS custom properties via index signature casting
+          const style: React.CSSProperties & Record<string, string> = {
+            top: img.top || '50%',
+            left: img.left || '50%',
+            ['--img-rotation']: rotation + 'deg',
+            ['--img-scale']: scale.toString(),
+            ['--img-translate-x']: translateX,
+            ['--img-translate-y']: translateY,
+            // Hover deltas (defaults neutral)
+            ['--img-hover-scale']: (img.hoverScale ?? 1).toString(),
+            ['--img-hover-translate-x']: img.hoverTranslateX || '0',
+            ['--img-hover-translate-y']: img.hoverTranslateY || '0',
+            ['--img-hover-rotate']: (img.hoverRotate ?? 0) + 'deg'
+          };
+          if (img.zIndex !== undefined) style.zIndex = String(img.zIndex);
+          return (
+            <div key={i} className={['ai-project-card__img', img.className].filter(Boolean).join(' ')} style={style}>
+              <div className="ai-project-card__img-inner" style={{ backgroundImage: `url(${img.src})` }} />
+            </div>
+          );
+        })}
+      </div>
+      <div className="ai-project-card__border" aria-hidden="true" />
+    </div>
+  );
+};
+
+// (Presets removed – now data-driven via aiProjects.ts)

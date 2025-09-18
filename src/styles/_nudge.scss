@@ -1,0 +1,53 @@
+@use 'tokens' as *;
+
+.nudge {
+  --nudge-bg: #6c64fe; /* primary solid */
+  background: var(--nudge-bg);
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-md;
+  padding: $space-md $space-xl;
+  border-radius: 0 0 $radius-card $radius-card;
+  position: relative;
+  text-align: center;
+  box-shadow: $shadow-glass;
+  font-family: $font-sans-geom;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.nudge__content { margin: 0; }
+
+.nudge__link {
+  color: $color-white;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  &:hover { text-decoration-thickness: 2px; }
+  &:focus-visible { outline: 2px solid $color-white; outline-offset: 2px; }
+}
+
+.nudge__close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: $color-white;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  border-radius: 6px;
+  &:hover { background: rgba(255,255,255,0.12); }
+  &:focus-visible { outline: 2px solid $color-white; outline-offset: 2px; }
+}
+
+@media (max-width: $bp-md) {
+  .nudge { padding: $space-sm $space-lg; font-size: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nudge { transition: none !important; }
+}

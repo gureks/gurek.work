@@ -1,0 +1,103 @@
+// Design Tokens generated from Figma variable definitions
+// Spacing scale
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-2xl: 40px;
+$space-3xl: 48px;
+$space-mega: 80px;
+
+// Colors
+$color-background: #0f1117;
+$color-surface: #6c64fe0a; // surface
+$color-surface-glass: #6c64fe14; // surface-glass
+$color-border-glass: #6c64fe1f; // border-glass
+$color-primary: #6c64fe;
+$color-secondary: #a98bff;
+$color-accent-1: #ff6b6b;
+$color-accent-1-surface-bg: #ff6b6b14;
+$color-accent-1-surface-border: #ff6b6b1f;
+$color-accent-3: #b4d455;
+$color-accent-3-surface-bg: #b4d45514;
+$color-accent-3-surface-border: #b4d4551f;
+$color-text-primary: #f3f4f7;
+$color-text-secondary: #a3a7b2;
+$color-white: #ffffff;
+$color-blue-80: #0c2d5f;
+$color-blue-60: #0C2D5F; // Provided duplicate, retained for clarity
+$color-tag-bg: #ffffff0a;
+$color-tag-border: #ffffff14;
+
+// Typography sizes
+$font-size-base: 16px;
+$font-size-hero-sans: 56px; // Sans/Hero
+$font-size-hero-serif: 60px; // Serif/Hero
+$font-size-title-sans: 40px; // Sans/Title
+$font-size-title-serif: 44px; // Serif/Title
+$font-size-card-title: 32px; // Sans/Card Title
+$font-size-card-subtext: 18px; // Sans/Card Subtext
+$font-size-subtext-sans: 24px; // Sans/Subtext
+$font-size-subtext-serif: 26px; // Serif/Subtext
+$font-size-label: 18px; // Sans/Label
+$font-size-button: 16px; // Sans/Button
+$font-size-mega-serif: 160px; // Serif/Mega
+
+// Line heights (mapped roughly based on tokens)
+$lh-tight: 1.0;
+$lh-hero: 1.0;
+$lh-serif-tight: 1.1;
+$lh-body: 1.35;
+
+// Font families (assumes custom fonts loaded separately)
+$font-sans-geom: 'Geometria', system-ui, sans-serif;
+$font-serif-news: 'Newsreader', serif;
+
+// Radii
+$radius-xs: 4px;
+$radius-pill: 50px;
+$radius-card: 32px;
+$radius-mega: 80px; // Large rounded sections
+
+// Shadows
+$shadow-glass: 0 0.602px 0.602px -1.25px rgba(47,47,106,0.07), 0 2.289px 2.289px -2.5px rgba(47,47,106,0.06), 0 10px 10px -3.75px rgba(47,47,106,0.02);
+$shadow-focus-accent: 0 0 12px rgba(108,100,254,0.6);
+$shadow-accent-soft: 0 4px 8px rgba(108,100,254,0.12);
+
+// Z-index scale
+$z-overlay: 10;
+$z-sticky: 2;
+$z-base: 1;
+
+// Breakpoints (assumed)
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+// CSS Custom Properties export (optional for runtime theming)
+:root {
+  --space-xs: #{$space-xs};
+  --space-sm: #{$space-sm};
+  --space-md: #{$space-md};
+  --space-lg: #{$space-lg};
+  --space-xl: #{$space-xl};
+  --space-2xl: #{$space-2xl};
+  --space-3xl: #{$space-3xl};
+  --space-mega: #{$space-mega};
+  --color-background: #{$color-background};
+  --color-surface: #{$color-surface};
+  --color-surface-glass: #{$color-surface-glass};
+  --color-border-glass: #{$color-border-glass};
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-accent-1: #{$color-accent-1};
+  --color-accent-3: #{$color-accent-3};
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-white: #{$color-white};
+  --font-sans-geom: #{$font-sans-geom};
+  --font-serif-news: #{$font-serif-news};
+  --radius-card: #{$radius-card};
+}
