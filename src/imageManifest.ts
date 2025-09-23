@@ -1,12 +1,25 @@
 // Central export for image assets using relative imports (bundled by Vite)
 // Add declarations in images.d.ts for TS to recognize these modules.
-export { default as imgArrow } from '../assets/bbe63b013dae571667f496b70a537a1fffe444ec.svg';
 export { default as imgMsmeAwards } from '../assets/590b70389c10b655dec7bfe4e6797c36f5385cb9.png';
 export { default as imgStep4Processing } from '../assets/2308972cbd903a061dba8b2e2c28813e4cf1c4a5.png';
 export { default as imgStep3 } from '../assets/13bb47b1032c11a115594923a32b10756628705a.png';
 export { default as img0SydmAno8XDbdIh1 } from '../assets/e67d319b98955f5cb6fbcf69af941d226cbd3316.png';
 export { default as imgImage } from '../assets/3a35e70a9c3ef6acdcd71627e0d86f94116b4de9.png';
 export { default as imgWinnerCertificate } from '../assets/5e9395e7b1913cbec0a5afdb85672077c656ccac.png';
+
+export { default as iconAi } from '../assets/icon/ai.svg';
+export { default as iconArrowCircleDownRight } from '../assets/icon/arrow-circle-down-right.svg';
+export { default as iconArrowCircleUpRight } from '../assets/icon/arrow-circle-up-right.svg';
+export { default as iconArrowUpRight } from '../assets/icon/arrow-up-right.svg';
+export { default as iconArrowDownRight } from '../assets/icon/arrow-down-right.svg';
+export { default as iconBook } from '../assets/icon/book.svg';
+export { default as iconDesigningInterfaces } from '../assets/icon/designing_interfaces.svg';
+export { default as iconEngineeringIntelligence } from '../assets/icon/engineering_intelligence.svg';
+export { default as iconBuildingProducts } from '../assets/icon/building_products.svg';
+export { default as iconGurekSingh } from '../assets/icon/gureksingh.svg';
+export { default as iconHumans } from '../assets/icon/humans.svg';
+export { default as iconMe } from '../assets/icon/me.svg';
+
 export { default as imgIconAiBase } from '../assets/69ce1512aea857bf813439c27c16354d3ac31957.svg';
 export { default as imgIconAiStroke1 } from '../assets/b6d3eb4ec9b0d628b735b9c9adddf62a04466d72.svg';
 export { default as imgIconAiStroke2 } from '../assets/26e62a2111103264fccff957d5f2d9b8ef09c992.svg';
@@ -23,6 +36,7 @@ export { default as imgIconHumans7 } from '../assets/1e2e08eadac4898b2c2c960f52e
 export { default as imgIconHumans8 } from '../assets/700997ef49c9401a1cd25c7300d1500b2560e4f3.svg';
 export { default as imgIconHumans9 } from '../assets/36da349beec268269c8bfb279ab0cf89bad53dda.svg';
 export { default as imgTicker } from '../assets/a1e4bdcc41dfec88f69cab9665eb9d2726044a65.svg';
+export { default as imgSliderHandle } from '../assets/111a774d0a9247bed8f49b9233ca1fa4b0f63408.svg';
 // Bento (Design Projects) section assets
 export { default as imgBeforeAfterAfter } from '../assets/a8a5789cb5bdd1ecd459f7aa097c603f597a881c.png';
 export { default as imgBeforeAfterBefore } from '../assets/59cd6878f25378d99c6bf770a48e6a53d5acd348.png';
@@ -31,5 +45,4 @@ export { default as imgJobCard2 } from '../assets/9c80fabf60cd2c37d222a2c10098c1
 export { default as imgJobCard3 } from '../assets/88dd682a2bdd79f6ae33f87933d1ad13994f22d4.png';
 export { default as imgProductReviews } from '../assets/0e8e1e553a445e91a4e325cca69b76c2e5a3a074.png';
 export { default as imgBetterHandoffsTop } from '../assets/f3f36e5f785f5496c020dff2e0b60a2381323821.png';
-export { default as imgSliderHandle } from '../assets/111a774d0a9247bed8f49b9233ca1fa4b0f63408.svg';
 // Footer specific (Figma headshot svg placed under public for now) – if moved to src/assets add here.

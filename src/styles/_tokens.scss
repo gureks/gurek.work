@@ -1,4 +1,18 @@
 // Design Tokens generated from Figma variable definitions
+
+// Font imports
+// @font-face {
+//   font-family: 'Geometria';
+//   src: url('/assets/Geometria.woff2') format('woff2'),
+//        url('/assets/Geometria.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/geometria');
+
 // Spacing scale
 $space-xs: 4px;
 $space-sm: 8px;
@@ -10,25 +24,47 @@ $space-3xl: 48px;
 $space-mega: 80px;
 
 // Colors
-$color-background: #0f1117;
-$color-surface: #6c64fe0a; // surface
-$color-surface-glass: #6c64fe14; // surface-glass
-$color-border-glass: #6c64fe1f; // border-glass
-$color-primary: #6c64fe;
-$color-secondary: #a98bff;
-$color-accent-1: #ff6b6b;
-$color-accent-1-surface-bg: #ff6b6b14;
-$color-accent-1-surface-border: #ff6b6b1f;
-$color-accent-3: #b4d455;
-$color-accent-3-surface-bg: #b4d45514;
-$color-accent-3-surface-border: #b4d4551f;
-$color-text-primary: #f3f4f7;
-$color-text-secondary: #a3a7b2;
 $color-white: #ffffff;
-$color-blue-80: #0c2d5f;
-$color-blue-60: #0C2D5F; // Provided duplicate, retained for clarity
-$color-tag-bg: #ffffff0a;
-$color-tag-border: #ffffff14;
+
+$color-dark-background: #0f1117;
+$color-dark-surface: #6c64fe0a; // surface
+$color-dark-surface-glass: #6c64fe14; // surface-glass
+$color-dark-border-glass: #6c64fe1f; // border-glass
+$color-dark-primary: #6c64fe;
+$color-dark-secondary: #a98bff;
+$color-dark-accent-1: #ff6b6b;
+$color-dark-accent-1-surface-bg: #ff6b6b14;
+$color-dark-accent-1-surface-border: #ff6b6b1f;
+$color-dark-accent-2: #FFDC6A;
+$color-dark-accent-2-surface-bg: #FFDC6A14;
+$color-dark-accent-2-surface-border: #FFDC6A1f;
+$color-dark-accent-3: #b4d455;
+$color-dark-accent-3-surface-bg: #b4d45514;
+$color-dark-accent-3-surface-border: #b4d4551f;
+$color-dark-text-primary: #f3f4f7;
+$color-dark-text-secondary: #a3a7b2;
+$color-dark-tag-bg: #ffffff0a;
+$color-dark-tag-border: #ffffff14;
+
+$color-light-background: #F9FAFB;
+$color-light-surface: #6246EA05; // surface
+$color-light-surface-glass: #6246EA0a; // surface-glass
+$color-light-border-glass: #6246EA14; // border-glass
+$color-light-primary: #6246EA;
+$color-light-secondary: #a98bff;
+$color-light-accent-1: #ff6b6b;
+$color-light-accent-1-surface-bg: #ff6b6b0a;
+$color-light-accent-1-surface-border: #ff6b6b14;
+$color-light-accent-2: #FFDC6A;
+$color-light-accent-2-surface-bg: #FFDC6A0a;
+$color-light-accent-2-surface-border: #FFDC6A14;
+$color-light-accent-3: #b4d455;
+$color-light-accent-3-surface-bg: #b4d4550a;
+$color-light-accent-3-surface-border: #b4d45514;
+$color-light-text-primary: #0F1117;
+$color-light-text-secondary: #5C5F6A;
+$color-light-tag-bg: #6246EA14;
+$color-light-tag-border: #6246EA1f;
 
 // Typography sizes
 $font-size-base: 16px;
@@ -51,8 +87,8 @@ $lh-serif-tight: 1.1;
 $lh-body: 1.35;
 
 // Font families (assumes custom fonts loaded separately)
-$font-sans-geom: 'Geometria', system-ui, sans-serif;
-$font-serif-news: 'Newsreader', serif;
+$font-sans-geom: 'Geometria', 'Inter', sans-serif;
+$font-serif-news: 'Newsreader', 'Georgia', serif;
 
 // Radii
 $radius-xs: 4px;
@@ -86,17 +122,6 @@ $bp-xl: 1280px;
   --space-2xl: #{$space-2xl};
   --space-3xl: #{$space-3xl};
   --space-mega: #{$space-mega};
-  --color-background: #{$color-background};
-  --color-surface: #{$color-surface};
-  --color-surface-glass: #{$color-surface-glass};
-  --color-border-glass: #{$color-border-glass};
-  --color-primary: #{$color-primary};
-  --color-secondary: #{$color-secondary};
-  --color-accent-1: #{$color-accent-1};
-  --color-accent-3: #{$color-accent-3};
-  --color-text-primary: #{$color-text-primary};
-  --color-text-secondary: #{$color-text-secondary};
-  --color-white: #{$color-white};
   --font-sans-geom: #{$font-sans-geom};
   --font-serif-news: #{$font-serif-news};
   --radius-card: #{$radius-card};

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/global.scss';
 import footerConfig from '../data/footer';
+import { iconArrowCircleDownRight, iconArrowCircleUpRight } from '../imageManifest';
 
 export const FOOTER_SECTION_ID = 'footer-section';
 
@@ -27,15 +28,20 @@ export const Footer: React.FC = () => {
               <a
                 key={cta.id}
                 href={cta.href}
-                className={`button button--${cta.kind}`}
+                className={`button button--${cta.variant}`}
                 {...(cta.external ? { rel: 'noopener noreferrer', target: '_blank' } : {})}
               >
                 <span className="button__label">{cta.label}</span>
-                <span className="icon-circle" aria-hidden="true" />
+                <img src={cta.variant === 'primary' ? iconArrowCircleDownRight : iconArrowCircleUpRight} alt="" aria-hidden="true" style={{ width: 16 }} />
               </a>
             ))}
           </div>
         </div>
+        <p className="footer__copyright">
+          <span>{copyright.prefix} {copyright.year}. All </span>
+          <a href={copyright.licenseUrl} className="footer__license">{copyright.licenseLabel}</a>
+          <span> {copyright.suffix}</span>
+        </p>
         <div className="footer__logomark" aria-hidden="true">
           <span className="footer-logoword footer-logoword--left">{logomark.left}</span>
           <span className="footer-headshot">
@@ -43,11 +49,6 @@ export const Footer: React.FC = () => {
           </span>
           <span className="footer-logoword footer-logoword--right">{logomark.right}</span>
         </div>
-        <p className="footer__copyright">
-          <span>{copyright.prefix} {copyright.year}. All </span>
-          <a href={copyright.licenseUrl} className="footer__license">{copyright.licenseLabel}</a>
-          <span> {copyright.suffix}</span>
-        </p>
       </div>
     </footer>
   );

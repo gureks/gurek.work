@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/global.scss';
 import { notWorkCarousel, NOT_WORK_SECTION_ID } from '../data/notWork';
 import { useReveal } from '../hooks/useReveal';
-import { imgArrow } from '../imageManifest';
+import { iconMe } from '../imageManifest';
 
 // Placeholder avatar uses two layered arrow icons for now (replace with headshot svgs later)
 
@@ -18,7 +18,7 @@ export const PlaySection: React.FC = () => {
           <span className="sans">work,</span>
           <span className="sans">but</span>
           <span className="play-section__avatar" aria-hidden="true">
-            <img src={imgArrow} alt="" loading="lazy" style={{ width: 24 }} />
+            <img src={iconMe} alt="" loading="lazy" style={{ width: 32, verticalAlign: 'bottom' }} />
           </span>
           <span className="serif">still</span>
           <span className="serif">me</span>

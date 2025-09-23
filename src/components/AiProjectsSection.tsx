@@ -4,6 +4,7 @@ import { AiProjectCard } from './AiProjectCard';
 import { TagTicker } from './TagTicker';
 import { useReveal } from '../hooks/useReveal';
 import { aiProjects } from '../data/aiProjects';
+import { iconAi, iconHumans } from '../imageManifest';
 
 
 export const AiProjectsSection: React.FC = () => {
@@ -17,10 +18,12 @@ export const AiProjectsSection: React.FC = () => {
           <div className="lines" aria-hidden="true">
             <div className="line">
               <span className="h-title-sans">Built with</span>
+              <img src={iconAi} alt="" aria-hidden="true" className="ai-projects-title__icon" />
               <span className="h-title-serif" style={{ fontStyle: 'italic', fontWeight: 300 }}>AI,</span>
             </div>
             <div className="line">
               <span className="h-title-sans">Designed for</span>
+              <img src={iconHumans} alt="" aria-hidden="true" className="ai-projects-title__icon" />
               <span className="h-title-serif" style={{ fontStyle: 'italic', fontWeight: 300 }}>humans.</span>
             </div>
           </div>

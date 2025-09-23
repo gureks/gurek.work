@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/global.scss';
 import { readsCarousel, READS_SECTION_ID, ReadItem } from '../data/reads';
-import { imgTicker } from '../imageManifest';
+import { iconBook } from '../imageManifest';
 import { useReveal } from '../hooks/useReveal';
 
 export const ReadsSection: React.FC = () => {
@@ -18,7 +18,7 @@ export const ReadsSection: React.FC = () => {
           <span className="reads-title__serif">I</span>
           <span className="reads-title__serif">Read</span>
           <span className="reads-title__icon" aria-hidden="true">
-            <img src={imgTicker} alt="" />
+            <img src={iconBook} alt="" />
           </span>
           <span className="reads-title__sans">Not</span>
           <span className="reads-title__sans">Just</span>

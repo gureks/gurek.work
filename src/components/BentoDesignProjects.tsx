@@ -3,12 +3,13 @@ import '../styles/global.scss';
 import { BeforeAfterSlider } from './BeforeAfterSlider';
 import { Tag } from './Tag';
 import {
-  imgArrow,
+  iconArrowUpRight,
   imgJobCard1,
   imgJobCard2,
   imgJobCard3,
   imgProductReviews,
-  imgBetterHandoffsTop
+  imgBetterHandoffsTop,
+  iconDesigningInterfaces
 } from '../imageManifest';
 import { projectsColumnLeft, projectsColumnMid, projectsColumnWide } from '../data/projects';
 import { useReveal } from '../hooks/useReveal';
@@ -24,20 +25,30 @@ export const BentoDesignProjects: React.FC = () => {
       <header className="bento-design-projects__intro">
         <h2 id="bento-heading" className="visually-hidden">Design Projects</h2>
         <p className="intro-line">
-          <span className="h-title-sans">From</span> <span className="h-title-sans">Insight</span> <span className="h-title-sans">to</span> <span className="h-title-sans">Interface</span> <span className="h-title-serif">My</span> <span className="h-title-serif">Design</span> <span className="h-title-serif">Career</span>
+          <span className="h-title-sans">From</span>
+          <span className="h-title-sans">Insight</span>
+          <span className="h-title-sans">to</span>
+          <span className="h-title-sans">Interface</span>
+          <span className="bento-title__icon" aria-hidden="true">
+            <img src={iconDesigningInterfaces} alt="" loading="lazy" style={{ width: 32 }} />
+          </span>
+          <span className="h-title-serif">My</span>
+          <span className="h-title-serif">Design</span>
+          <span className="h-title-serif">Career</span>
         </p>
         <p className="intro-sub text-subtext">
-          I’ve led projects across <span className="text-subtext-serif">UX, frontend systems, and product thinking.</span> Here’s a look at what I’ve shipped.
+          I’ve led projects across <span className="text-subtext-serif">UX, frontend systems, and product thinking.</span>
+          Here’s a look at what I’ve shipped.
         </p>
       </header>
       <div className="bento-grid">
         <div ref={leftRef} className="bento-col reveal">
           {projectsColumnLeft.map(p => (
-            <article key={p.id} className="bento-card">
+            <article key={p.id} className={`bento-card ${p.variant}`}>
               <div className="bento-card__body">
                 <div className="bento-card__head">
                   <h3 className="h-card-title bento-card__title">{p.title}</h3>
-                  <div className="bento-card__arrow" aria-hidden="true"><img src={imgArrow} alt="" loading="lazy" /></div>
+                  <div className="bento-card__arrow" aria-hidden="true"><img src={iconArrowUpRight} alt="" loading="lazy" /></div>
                 </div>
                 <p className="bento-card__desc text-label text-secondary">{p.description}</p>
                 <div className="bento-card__tags">{p.tags.map(t => <Tag key={t}>{t}</Tag>)}</div>
@@ -61,11 +72,11 @@ export const BentoDesignProjects: React.FC = () => {
         </div>
   <div ref={midRef} className="bento-col reveal">
           {projectsColumnMid.map(p => (
-            <article key={p.id} className="bento-card">
+            <article key={p.id} className="bento-card" >
               <div className="bento-card__body">
                 <div className="bento-card__head">
                   <h3 className="h-card-title bento-card__title">{p.title}</h3>
-                  <div className="bento-card__arrow" aria-hidden="true"><img src={imgArrow} alt="" loading="lazy" /></div>
+                  <div className="bento-card__arrow" aria-hidden="true"><img src={iconArrowUpRight} alt="" loading="lazy" /></div>
                 </div>
                 <p className="bento-card__desc text-label text-secondary">{p.description}</p>
                 <div className="bento-card__tags">{p.tags.map(t => <Tag key={t}>{t}</Tag>)}</div>
@@ -87,7 +98,7 @@ export const BentoDesignProjects: React.FC = () => {
               <div className="bento-card__body">
                 <div className="bento-card__head">
                   <h3 className="h-card-title bento-card__title">{p.title}</h3>
-                  <div className="bento-card__arrow" aria-hidden="true"><img src={imgArrow} alt="" loading="lazy" /></div>
+                  <div className="bento-card__arrow" aria-hidden="true"><img src={iconArrowUpRight} alt="" loading="lazy" /></div>
                 </div>
                 <p className="bento-card__desc text-label text-secondary">{p.description}</p>
                 <div className="bento-card__tags">{p.tags.map(t => <Tag key={t}>{t}</Tag>)}</div>

@@ -1,27 +1,11 @@
+import { AiProjectCardImageSpec } from './AiProjectCardImageSpec';
 import { imgMsmeAwards, imgStep4Processing, imgStep3, img0SydmAno8XDbdIh1, imgImage, imgWinnerCertificate } from '../imageManifest';
 
 export interface AiProjectSpec {
   id: string;
   title: string;
   description: string;
-  images: {
-    src: string;
-    rotation?: number;
-    /** Optional fine positioning within stack (percentage offsets) */
-    top?: string;
-    left?: string;
-    /** Additional transform (e.g., scale) appended after rotation */
-    scale?: number;
-    translateX?: string;
-    translateY?: string;
-    /** Optional stacking order */
-    zIndex?: number;
-    /** Hover transform deltas (applied multiplicatively/additively) */
-    hoverScale?: number; // multiply base scale
-    hoverTranslateX?: string; // additive offset on hover
-    hoverTranslateY?: string;
-    hoverRotate?: number; // additive degrees on hover
-  }[];
+  images: AiProjectCardImageSpec[];
   accent: 'brand-accent-1' | 'brand-accent-3' | 'primary';
   offset: 1 | 2 | 3; // sticky offset ordering
 }

@@ -1,6 +1,7 @@
-export interface HeroHeadingPart { text: string; variant: 'sans' | 'serif'; }
+export interface HeroHeadingPart { text: string; variant: 'sans' | 'serif'; icon?: string; iconPosition?: 'left' | 'right'; }
 export interface HeroLine { parts: HeroHeadingPart[]; }
 export interface HeroCta { id: string; label: string; href: string; variant: 'primary' | 'secondary'; }
+import { iconDesigningInterfaces, iconEngineeringIntelligence, iconBuildingProducts, iconGurekSingh } from '../imageManifest';
 
 export interface HeroIntroSegment { text: string; variant: 'sans' | 'serif'; emphasis?: boolean; }
 
@@ -10,21 +11,24 @@ export interface HeroConfig {
   ctas: HeroCta[];
   decorativeIcons: { id: string; src: string; alt?: string }[]; // future use for inline hero icons
 }
-
-// Public Figma exported icons (subset – can be extended)
-const ICON_INTERFACE = '/figma-assets/hero/f8e383e268379c015875c4021a88eccbbe1b10f8.svg';
-const ICON_ENGINEERING = '/figma-assets/hero/c82e8221f826fb92316bcd1dbf51898099124a8c.svg';
-const ICON_PRODUCTS = '/figma-assets/hero/b35970f73a003c10307feec9b8aa04c2b2f1b6bc.svg';
-
 export const heroConfig: HeroConfig = {
   lines: [
-    { parts: [ { text: 'Designing', variant: 'sans' }, { text: 'Interfaces.', variant: 'serif' } ] },
-    { parts: [ { text: 'Engineering', variant: 'sans' }, { text: 'Intelligence.', variant: 'serif' } ] },
-    { parts: [ { text: 'Building', variant: 'sans' }, { text: 'Products.', variant: 'serif' } ] }
+    { parts: [
+      { icon: iconDesigningInterfaces, iconPosition: 'left', text: 'Designing', variant: 'sans' },
+      { text: 'Interfaces.', variant: 'serif' }
+    ] },
+    { parts: [
+      { text: 'Engineering', variant: 'sans', icon: iconEngineeringIntelligence, iconPosition: 'right' },
+      { text: 'Intelligence.', variant: 'serif' }
+    ] },
+    { parts: [
+      { text: 'Building', variant: 'sans'},
+      { text: 'Products.', variant: 'serif', icon: iconBuildingProducts, iconPosition: 'right' }
+    ] }
   ],
   intro: [
-    { text: 'I\'m', variant: 'sans' },
-    { text: 'Gurek', variant: 'serif', emphasis: true },
+    { text: "I'm", variant: 'sans' },
+    { text: 'Gurek', variant: 'serif', emphasis: true, icon: iconGurekSingh},
     { text: 'Singh', variant: 'serif', emphasis: true },
     { text: '-', variant: 'sans' },
     { text: 'UX Engineer', variant: 'sans' },
@@ -41,9 +45,9 @@ export const heroConfig: HeroConfig = {
     { id: 'resume', label: 'View Resume', href: '/resume.pdf', variant: 'secondary' }
   ],
   decorativeIcons: [
-    { id: 'interface', src: ICON_INTERFACE, alt: '' },
-    { id: 'engineering', src: ICON_ENGINEERING, alt: '' },
-    { id: 'products', src: ICON_PRODUCTS, alt: '' }
+    { id: 'interface', src: iconDesigningInterfaces, alt: '' },
+    { id: 'engineering', src: iconEngineeringIntelligence, alt: '' },
+    { id: 'products', src: iconBuildingProducts, alt: '' }
   ]
 };
 

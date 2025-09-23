@@ -2,7 +2,7 @@ export interface FooterCta {
   id: string;
   label: string;
   href: string;
-  kind: 'primary' | 'secondary';
+  variant: 'primary' | 'secondary';
   external?: boolean;
 }
 
@@ -51,8 +51,8 @@ export const footerConfig: FooterConfig = {
     { text: 'AI-first systems.', variant: 'serif' }
   ],
   ctas: [
-    { id: 'talk', label: 'Let’s Talk', href: 'mailto:gurek@example.com', kind: 'primary' },
-    { id: 'resume', label: 'Download Resume', href: '/resume.pdf', kind: 'secondary' }
+    { id: 'talk', label: 'Let’s Talk', href: 'mailto:gurek@example.com', variant: 'primary' },
+    { id: 'resume', label: 'Download Resume', href: '/resume.pdf', variant: 'secondary' }
   ],
   copyright: {
     prefix: '© Copyright',

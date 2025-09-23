@@ -14,14 +14,14 @@ import ThemeToggle from './components/ThemeToggle';
 const App = () => {
   return (
     <Layout>
-      <NudgeAlert />
-      <Hero />
-  <BentoDesignProjects />
-  <AiProjectsSection />
-  <PlaySection />
-  <ReadsSection />
-      <Footer />
-      <ThemeToggle />
+        <NudgeAlert />
+        <Hero />
+        <AiProjectsSection />
+        <BentoDesignProjects />
+        <PlaySection />
+        <ReadsSection />
+        <Footer />
+        <ThemeToggle />
     </Layout>
   );
 };

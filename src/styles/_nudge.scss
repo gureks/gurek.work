@@ -1,9 +1,10 @@
 @use 'tokens' as *;
+@use 'theme' as *;
 
 .nudge {
   --nudge-bg: #6c64fe; /* primary solid */
   background: var(--nudge-bg);
-  color: $color-white;
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,11 +22,11 @@
 .nudge__content { margin: 0; }
 
 .nudge__link {
-  color: $color-white;
+  color: var(--color-white);
   text-decoration: underline;
   text-underline-offset: 2px;
   &:hover { text-decoration-thickness: 2px; }
-  &:focus-visible { outline: 2px solid $color-white; outline-offset: 2px; }
+  &:focus-visible { outline: 2px solid var(--color-white); outline-offset: 2px; }
 }
 
 .nudge__close {
@@ -34,14 +35,14 @@
   right: 12px;
   background: transparent;
   border: none;
-  color: $color-white;
+  color: var(--color-white);
   font-size: 20px;
   cursor: pointer;
   line-height: 1;
   padding: 4px;
   border-radius: 6px;
   &:hover { background: rgba(255,255,255,0.12); }
-  &:focus-visible { outline: 2px solid $color-white; outline-offset: 2px; }
+  &:focus-visible { outline: 2px solid  var(--color-white); outline-offset: 2px; }
 }
 
 @media (max-width: $bp-md) {

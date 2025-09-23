@@ -4,17 +4,21 @@ import '../styles/global.scss';
 const STORAGE_KEY = 'pref-theme';
 
 export const ThemeToggle: React.FC = () => {
+  // Initial theme: use saved preference or fall back to system preference
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     if (typeof window === 'undefined') return 'dark';
-    const stored = (localStorage.getItem(STORAGE_KEY) as 'dark' | 'light' | null);
+    const stored = localStorage.getItem(STORAGE_KEY) as 'dark' | 'light' | null;
     if (stored) return stored;
-    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    return prefersLight ? 'light' : 'dark';
+    const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+    return prefersDark ? 'dark' : 'light';
   });
 
+  // Apply theme and persist
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem(STORAGE_KEY, theme);
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch {}
   }, [theme]);
 
   const toggle = () => setTheme(t => (t === 'dark' ? 'light' : 'dark'));

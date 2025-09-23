@@ -1,37 +1,20 @@
 import React from 'react';
 import '../styles/global.scss';
-import { imgArrow } from '../imageManifest';
-
-export interface AiProjectCardImageSpec {
-  src: string;
-  alt?: string;
-  rotation?: number; // degrees
-  className?: string;
-  /** Percentage or length for fine positioning (defaults 50%) */
-  top?: string;
-  left?: string;
-  /** Optional additional transforms applied after rotation */
-  scale?: number; // base scale (default 1)
-  translateX?: string; // e.g. '4%' or '8px'
-  translateY?: string;
-  // layering & hover deltas
-  zIndex?: number;
-  hoverScale?: number;
-  hoverTranslateX?: string;
-  hoverTranslateY?: string;
-  hoverRotate?: number;
-}
+// import '../styles/_ai-projects.scss';
+import { iconArrowUpRight } from '../imageManifest';
+import { AiProjectCardImageSpec } from '../data/AiProjectCardImageSpec';
 
 export interface AiProjectCardProps {
   variant?: 'accent-1' | 'accent-2' | 'accent-3';
   title: string;
   description: string;
   images: AiProjectCardImageSpec[];
-  accent?: 'brand-accent-1' | 'brand-accent-3' | 'primary';
+  accent?: 'brand-accent-1' | 'brand-accent-2' | 'brand-accent-3' | 'primary';
 }
 
 const accentClass: Record<string, string> = {
   'brand-accent-1': 'ai-project-card--accent-1',
+  'brand-accent-2': 'ai-project-card--accent-2',
   'brand-accent-3': 'ai-project-card--accent-3',
   'primary': 'ai-project-card--accent-primary'
 };
@@ -48,7 +31,7 @@ export const AiProjectCard: React.FC<AiProjectCardProps> = ({
       <div className="ai-project-card__head">
         <h3 className="h-card-title ai-project-card__title">{title}</h3>
         <div className="ai-project-card__icon" aria-hidden="true">
-          <img src={imgArrow} alt="" loading="lazy" />
+          <img src={iconArrowUpRight} alt="" loading="lazy" />
         </div>
       </div>
       <p className="ai-project-card__desc text-label text-secondary">{description}</p>

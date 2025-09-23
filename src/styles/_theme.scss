@@ -3,15 +3,72 @@
 /* Theming system: apply [data-theme="light"] on <html> or body */
 /* Dark (default) uses base token custom properties */
 
+// :root[data-theme='dark'] {
+//   --color-background: #ffffff;
+//   --color-text-primary: #0f1117;
+//   --color-text-secondary: #4a5568;
+//   --color-surface: rgba(108,100,254,0.06);
+//   --color-surface-glass: rgba(108,100,254,0.08);
+//   --color-border-glass: rgba(108,100,254,0.18);
+//   --color-tag-bg: rgba(0,0,0,0.04);
+//   --color-tag-border: rgba(0,0,0,0.08);
+// }
+
+// :root[data-theme='light'] {
+//   --color-background: #ffffff;
+//   --color-text-primary: #0f1117;
+//   --color-text-secondary: #4a5568;
+//   --color-surface: rgba(108,100,254,0.06);
+//   --color-surface-glass: rgba(108,100,254,0.08);
+//   --color-border-glass: rgba(108,100,254,0.18);
+//   --color-tag-bg: rgba(0,0,0,0.04);
+//   --color-tag-border: rgba(0,0,0,0.08);
+// }
+
+:root[data-theme='dark'] {
+  --color-background: #{$color-dark-background};
+  --color-surface: #{$color-dark-surface};
+  --color-surface-glass: #{$color-dark-surface-glass};
+  --color-border-glass: #{$color-dark-border-glass};
+  --color-primary: #{$color-dark-primary};
+  --color-secondary: #{$color-dark-secondary};
+  --color-accent-1: #{$color-dark-accent-1};
+  --color-accent-1-surface-bg: #{$color-dark-accent-1-surface-bg};
+  --color-accent-1-surface-border: #{$color-dark-accent-1-surface-border};
+  --color-accent-2: #{$color-dark-accent-2};
+  --color-accent-2-surface-bg: #{$color-dark-accent-2-surface-bg};
+  --color-accent-2-surface-border: #{$color-dark-accent-2-surface-border};
+  --color-accent-3: #{$color-dark-accent-3};
+  --color-accent-3-surface-bg: #{$color-dark-accent-3-surface-bg};
+  --color-accent-3-surface-border: #{$color-dark-accent-3-surface-border};
+  --color-text-primary: #{$color-dark-text-primary};
+  --color-text-secondary: #{$color-dark-text-secondary};
+  --color-tag-bg: #{$color-dark-tag-bg};
+  --color-tag-border: #{$color-dark-tag-border};
+  --color-white: #{$color-white};
+}
+
 :root[data-theme='light'] {
-  --color-background: #ffffff;
-  --color-text-primary: #0f1117;
-  --color-text-secondary: #4a5568;
-  --color-surface: rgba(108,100,254,0.06);
-  --color-surface-glass: rgba(108,100,254,0.08);
-  --color-border-glass: rgba(108,100,254,0.18);
-  --color-tag-bg: rgba(0,0,0,0.04);
-  --color-tag-border: rgba(0,0,0,0.08);
+  --color-background: #{$color-light-background};
+  --color-surface: #{$color-light-surface};
+  --color-surface-glass: #{$color-light-surface-glass};
+  --color-border-glass: #{$color-light-border-glass};
+  --color-primary: #{$color-light-primary};
+  --color-secondary: #{$color-light-secondary};
+  --color-accent-1: #{$color-light-accent-1};
+  --color-accent-1-surface-bg: #{$color-light-accent-1-surface-bg};
+  --color-accent-1-surface-border: #{$color-light-accent-1-surface-border};
+  --color-accent-2: #{$color-light-accent-2};
+  --color-accent-2-surface-bg: #{$color-light-accent-2-surface-bg};
+  --color-accent-2-surface-border: #{$color-light-accent-2-surface-border};
+  --color-accent-3: #{$color-light-accent-3};
+  --color-accent-3-surface-bg: #{$color-light-accent-3-surface-bg};
+  --color-accent-3-surface-border: #{$color-light-accent-3-surface-border};
+  --color-text-primary: #{$color-light-text-primary};
+  --color-text-secondary: #{$color-light-text-secondary};
+  --color-tag-bg: #{$color-light-tag-bg};
+  --color-tag-border: #{$color-light-tag-border};
+  --color-white: #{$color-white};
 }
 
 /* Map CSS custom properties back to SCSS usage scope by layering utility classes */
