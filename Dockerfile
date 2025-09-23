@@ -1,4 +1,4 @@
-# Multi-stage build for production static site
+# Multi-stage build: build with Node, serve static with serve on port 1234
 FROM node:20-alpine AS build
 WORKDIR /app
 
@@ -12,17 +12,16 @@ COPY . .
 # Build
 RUN npm run build || yarn build || pnpm build
 
-# Runtime stage using nginx for static serve
-FROM nginx:1.27-alpine AS runtime
-WORKDIR /usr/share/nginx/html
-# Remove default nginx static assets
-RUN rm -rf ./*
+# Runtime stage using a minimal Node image with 'serve'
+FROM node:20-alpine AS runtime
+WORKDIR /app
+
+# Install a tiny static file server
+RUN npm i -g serve@14
 
 # Copy build output
-COPY --from=build /app/dist ./
+COPY --from=build /app/dist ./dist
 
-# Provide a minimal nginx config (compression + caching)
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Expose and run on 1234
+EXPOSE 1234
+CMD ["serve", "-s", "dist", "-l", "1234"]
