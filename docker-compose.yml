@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react-app
+    expose:
+      - "1234"
+    networks:
+      - app_net
+
+networks:
+  app_net:
+    driver: bridge
