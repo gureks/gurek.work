@@ -1,5 +1,5 @@
 import { AiProjectCardImageSpec } from './AiProjectCardImageSpec';
-import { imgMsmeAwards, imgStep4Processing, imgStep3, img0SydmAno8XDbdIh1, imgImage, imgWinnerCertificate } from '../imageManifest';
+import { imgAvatarLeft, imgAvatarMiddle, imgAvatarRight, imgHackathonLeft, imgHackathonRight, imgTilayerMiddle } from '../imageManifest';
 
 export interface AiProjectSpec {
   id: string;
@@ -16,9 +16,9 @@ export const aiProjects: AiProjectSpec[] = [
     title: 'AI Avatar System',
     description: 'Trusted Stories, Humanized. Automated anchor-led videos → 80% faster, 60% cheaper',
     images: [
-      { src: imgMsmeAwards, rotation: 15, top: '48%', left: '52%', scale: 1.02, zIndex: 3, hoverScale: 1.06, hoverTranslateX: '2%', hoverTranslateY: '-2%' },
-      { src: imgStep4Processing, rotation: -7.5, top: '50%', left: '48%', scale: 0.98, zIndex: 2, hoverScale: 1.04, hoverTranslateX: '-1%', hoverTranslateY: '-1%' },
-      { src: imgStep3, rotation: 0, top: '50%', left: '50%', scale: 1, zIndex: 1, hoverScale: 1.03 }
+      { src: imgAvatarLeft, rotation: 15, top: '48%', left: '52%', scale: 1.02, zIndex: 3, hoverScale: 1.06, hoverTranslateX: '2%', hoverTranslateY: '-2%' },
+      { src: imgAvatarMiddle, rotation: -7.5, top: '50%', left: '48%', scale: 0.98, zIndex: 2, hoverScale: 1.04, hoverTranslateX: '-1%', hoverTranslateY: '-1%' },
+      { src: imgAvatarRight, rotation: 0, top: '50%', left: '50%', scale: 1, zIndex: 1, hoverScale: 1.03 }
     ],
     accent: 'brand-accent-1',
     offset: 1
@@ -28,7 +28,7 @@ export const aiProjects: AiProjectSpec[] = [
     title: 'Times Intelligence Layer',
     description: 'Reusable AI capable of powering summarisation, experiential copilots, real-time generated podcasts & Live TV, and entire knowledge grids',
     images: [
-      { src: img0SydmAno8XDbdIh1, rotation: 0, top: '50%', left: '50%', scale: 1, zIndex: 1, hoverScale: 1.04 }
+      { src: imgTilayerMiddle, rotation: 0, top: '50%', left: '50%', scale: 1, zIndex: 1, hoverScale: 1.04 }
     ],
     accent: 'primary',
     offset: 2
@@ -38,8 +38,8 @@ export const aiProjects: AiProjectSpec[] = [
     title: 'TIL AI Hackathon Winner 👑',
     description: 'Solo prototype → now in production video tooling stack',
     images: [
-      { src: imgImage, rotation: -15, top: '52%', left: '48%', scale: 1.05, zIndex: 2, hoverScale: 1.06, hoverTranslateX: '-1%', hoverTranslateY: '-2%' },
-      { src: imgWinnerCertificate, rotation: 0, top: '50%', left: '50%', scale: 0.95, zIndex: 1, hoverScale: 1.05, hoverTranslateY: '1%' }
+      { src: imgHackathonLeft, rotation: -15, top: '52%', left: '48%', scale: 1.05, zIndex: 2, hoverScale: 1.06, hoverTranslateX: '-1%', hoverTranslateY: '-2%' },
+      { src: imgHackathonRight, rotation: 0, top: '50%', left: '50%', scale: 0.95, zIndex: 1, hoverScale: 1.05, hoverTranslateY: '1%' }
     ],
     accent: 'brand-accent-3',
     offset: 3

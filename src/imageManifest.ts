@@ -1,12 +1,5 @@
 // Central export for image assets using relative imports (bundled by Vite)
 // Add declarations in images.d.ts for TS to recognize these modules.
-export { default as imgMsmeAwards } from '../assets/590b70389c10b655dec7bfe4e6797c36f5385cb9.png';
-export { default as imgStep4Processing } from '../assets/2308972cbd903a061dba8b2e2c28813e4cf1c4a5.png';
-export { default as imgStep3 } from '../assets/13bb47b1032c11a115594923a32b10756628705a.png';
-export { default as img0SydmAno8XDbdIh1 } from '../assets/e67d319b98955f5cb6fbcf69af941d226cbd3316.png';
-export { default as imgImage } from '../assets/3a35e70a9c3ef6acdcd71627e0d86f94116b4de9.png';
-export { default as imgWinnerCertificate } from '../assets/5e9395e7b1913cbec0a5afdb85672077c656ccac.png';
-
 export { default as iconAi } from '../assets/icon/ai.svg';
 export { default as iconArrowCircleDownRight } from '../assets/icon/arrow-circle-down-right.svg';
 export { default as iconArrowCircleUpRight } from '../assets/icon/arrow-circle-up-right.svg';
@@ -19,6 +12,14 @@ export { default as iconBuildingProducts } from '../assets/icon/building_product
 export { default as iconGurekSingh } from '../assets/icon/gureksingh.svg';
 export { default as iconHumans } from '../assets/icon/humans.svg';
 export { default as iconMe } from '../assets/icon/me.svg';
+
+// AI Projects section assets
+export { default as imgAvatarLeft } from '../assets/ai_projects/avatar/left_processing.png';
+export { default as imgAvatarMiddle } from '../assets/ai_projects/avatar/middle_tool.png';
+export { default as imgAvatarRight } from '../assets/ai_projects/avatar/right_gallery.png';
+export { default as imgHackathonLeft } from '../assets/ai_projects/hackathon/left_post.png';
+export { default as imgHackathonRight } from '../assets/ai_projects/hackathon/right_certificate.png';
+export { default as imgTilayerMiddle } from '../assets/ai_projects/tilayer/middle_graph.png';
 
 export { default as imgIconAiBase } from '../assets/69ce1512aea857bf813439c27c16354d3ac31957.svg';
 export { default as imgIconAiStroke1 } from '../assets/b6d3eb4ec9b0d628b735b9c9adddf62a04466d72.svg';
