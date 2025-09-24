@@ -49,3 +49,10 @@
 	.ai-project-card:hover, .ai-project-card:focus-within { transform: none; }
 	.ai-project-card:hover .ai-project-card__img, .ai-project-card:focus-within .ai-project-card__img { transform: translate(calc(-50% + var(--img-translate-x)), calc(-50% + var(--img-translate-y))) rotate(var(--img-rotation)) scale(var(--img-scale)); }
 }
+
+@media (max-width: $bp-md) {
+	.ai-project-card  {
+    width: 100%;
+	padding: $space-lg $space-lg 0;
+  }
+}

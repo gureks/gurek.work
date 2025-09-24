@@ -21,12 +21,13 @@
 [x] Fix Theme Toggling 
 [x] Fix Light Mode Colors blending opacity 
 [x] Fix borders colors issue rgba to var
-[ ] Fix Bento Section Mobile View
+[x] Fix Bento Section Mobile View
 
 [ ] Fix images for naming and manifest
 [ ] Optimize images 
-[ ] Before / After Slider Snapping and Opacity 
 [ ] Reads Section Scroll Speed
+
+[ ] Before / After Slider Snapping and Opacity 
 [ ] AI Section overflow
 
 ### Development - Copilot Recommendations
