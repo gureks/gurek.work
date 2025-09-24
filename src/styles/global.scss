@@ -46,7 +46,7 @@ body {
 // Surface styles
 .surface-glass {
   background: var(--color-surface-glass);
-  border: 2px solid rgba(var(--color-primary), 0.12);
+  border: 2px solid var(--color-border-glass);
   border-radius: $radius-card;
   position: relative;
 }
@@ -79,7 +79,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   &--primary { background: var(--color-primary); color: var(--color-white); border: none; }
-  &--secondary { background: rgba(var(--color-primary),0.04); color: var(--color-text-primary); position: relative; border: 1px solid rgba(var(--color-primary),0.12); }
+  &--secondary { background: var(--color-surface-glass); color: var(--color-text-primary); position: relative; border: 1px solid var(--color-border-glass); }
   .icon-circle { width: 24px; height: 24px; border-radius: 9999px; background: var(--color-text-primary); display: flex; align-items: center; justify-content: center; }
 }
 

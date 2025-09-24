@@ -16,14 +16,18 @@
 [x] Github + Codex integration
 [x] Go live dockerization
 
-[ ] Fix images for every section 
+------- 24 Sept  -------
 [x] Optimize SVGs 
-[ ] Optimize images 
 [x] Fix Theme Toggling 
-[ ] AI Section overflow
+[x] Fix Light Mode Colors blending opacity 
+[x] Fix borders colors issue rgba to var
 [ ] Fix Bento Section Mobile View
-[ ] Fix Light Mode Colors blending opacity 
-[ ] Fix borders colors issue rgba to var
+
+[ ] Fix images for naming and manifest
+[ ] Optimize images 
+[ ] Before / After Slider Snapping and Opacity 
+[ ] Reads Section Scroll Speed
+[ ] AI Section overflow
 
 ### Development - Copilot Recommendations
 [x] Accessibility polish: Decorative media now aria-hidden; single H1 introduced; hidden semantic heading text in Hero.

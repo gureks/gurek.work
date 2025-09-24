@@ -2,29 +2,6 @@
 
 /* Theming system: apply [data-theme="light"] on <html> or body */
 /* Dark (default) uses base token custom properties */
-
-// :root[data-theme='dark'] {
-//   --color-background: #ffffff;
-//   --color-text-primary: #0f1117;
-//   --color-text-secondary: #4a5568;
-//   --color-surface: rgba(108,100,254,0.06);
-//   --color-surface-glass: rgba(108,100,254,0.08);
-//   --color-border-glass: rgba(108,100,254,0.18);
-//   --color-tag-bg: rgba(0,0,0,0.04);
-//   --color-tag-border: rgba(0,0,0,0.08);
-// }
-
-// :root[data-theme='light'] {
-//   --color-background: #ffffff;
-//   --color-text-primary: #0f1117;
-//   --color-text-secondary: #4a5568;
-//   --color-surface: rgba(108,100,254,0.06);
-//   --color-surface-glass: rgba(108,100,254,0.08);
-//   --color-border-glass: rgba(108,100,254,0.18);
-//   --color-tag-bg: rgba(0,0,0,0.04);
-//   --color-tag-border: rgba(0,0,0,0.08);
-// }
-
 :root[data-theme='dark'] {
   --color-background: #{$color-dark-background};
   --color-surface: #{$color-dark-surface};

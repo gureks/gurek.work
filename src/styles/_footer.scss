@@ -4,7 +4,7 @@
 .footer {
   margin-top: 120px;
   padding: 80px 40px 0px;
-  background: rgba(255,255,255,0.04);
+  background: var(--color-tag-bg);
   position: relative;
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
@@ -12,7 +12,7 @@
   color: var(--color-text-primary);
 }
 
-.footer__border { position: absolute; inset: 0; border: 1px solid rgba(255,255,255,0.08); border-bottom: 0; border-radius: 80px 80px 0 0; pointer-events: none; }
+.footer__border { position: absolute; inset: 0; border: 1px solid var(--color-border-glass); border-bottom: 0; border-radius: 80px 80px 0 0; pointer-events: none; }
 .footer__inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 48px; }
 
 .footer__titles { display: flex; flex-direction: column; gap: 24px; }
@@ -28,8 +28,8 @@
 
 // Logomark mega words & headshot
 .footer__logomark { display: flex; gap: 24px; align-items: center; justify-content: center; }
-.footer-logoword { font-family: $font-serif-news; font-style: italic; font-size: 160px; line-height: 1.1; font-weight: 400; color: rgba(108,100,254,0.12); }
-.footer-headshot { background: #fff; padding: 24px; border-radius: 156px; box-shadow: 0 4px 8px 0 rgba(108,100,254,0.12); display:flex; align-items:center; justify-content:center; }
+.footer-logoword { font-family: $font-serif-news; font-style: italic; font-size: 160px; line-height: 1.1; font-weight: 400; color: var(--color-border-glass); }
+.footer-headshot { background: #fff; padding: 24px; border-radius: 156px; box-shadow: 0 4px 8px 0 var(--color-border-glass); display:flex; align-items:center; justify-content:center; }
 .footer-headshot img { width:108px; height:108px; object-fit:contain; }
 
 .footer__copyright { font-size: 12px; color: var(--color-text-secondary); max-width: 720px; line-height: 1.2; }
