@@ -7,6 +7,7 @@ import { NudgeAlert } from './components/NudgeAlert';
 import { Layout } from './components/Layout';
 import { BentoDesignProjects } from './components/BentoDesignProjects';
 import { Footer } from './components/Footer';
+import { Navbar } from './components/Navbar';
 import { PlaySection } from './components/PlaySection';
 import { ReadsSection } from './components/ReadsSection';
 import ThemeToggle from './components/ThemeToggle';
@@ -15,10 +16,11 @@ const App = () => {
   return (
     <Layout>
         <NudgeAlert />
+        <Navbar />
         <Hero />
         <AiProjectsSection />
         <BentoDesignProjects />
-        {/* <PlaySection /> */}
+        <PlaySection />
         <ReadsSection />
         <Footer />
         <ThemeToggle />

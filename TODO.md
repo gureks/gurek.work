@@ -24,8 +24,9 @@
 [x] Fix Bento Section Mobile View
 
 [x] Fix images for naming and manifest
-[x] Optimize images 
-[ ] Reads Section Scroll Speed
+[x] Optimize images
+[x] Reads Section Scroll Speed
+[x] Before / After Slider Snapping
 
 [ ] Before / After Slider Snapping and Opacity 
 [ ] AI Section overflow

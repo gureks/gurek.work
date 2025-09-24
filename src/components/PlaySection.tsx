@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/global.scss';
 import { notWorkCarousel, NOT_WORK_SECTION_ID } from '../data/notWork';
 import { useReveal } from '../hooks/useReveal';
-import { iconMe } from '../imageManifest';
+import { iconPlay } from '../imageManifest';
 
 // Placeholder avatar uses two layered arrow icons for now (replace with headshot svgs later)
 
@@ -10,7 +10,7 @@ export const PlaySection: React.FC = () => {
   const rowsRef = useReveal<HTMLDivElement>();
   const { rows } = notWorkCarousel;
   return (
-    <section className="play-section" id={NOT_WORK_SECTION_ID} aria-labelledby="play-heading">
+    <section className="play-section" aria-labelledby="play-heading" id="play">
       <header>
         <h2 id="play-heading" className="visually-hidden">Not Work (Still Me)</h2>
         <p className="play-section__title" aria-hidden="true">
@@ -18,7 +18,7 @@ export const PlaySection: React.FC = () => {
           <span className="sans">work,</span>
           <span className="sans">but</span>
           <span className="play-section__avatar" aria-hidden="true">
-            <img src={iconMe} alt="" loading="lazy" style={{ width: 32, verticalAlign: 'bottom' }} />
+            <img src={iconPlay} alt="" loading="lazy" style={{ width: 32, verticalAlign: 'bottom' }} />
           </span>
           <span className="serif">still</span>
           <span className="serif">me</span>

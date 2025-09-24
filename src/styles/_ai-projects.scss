@@ -8,7 +8,7 @@
 .ai-project-card__title { margin: 0; }
 .ai-project-card__icon { width: 32px; height: 32px; border-radius: 9999px; background: var(--color-text-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; img { width: 24px; height: 24px; } }
 .ai-project-card__desc { margin: 8px 0 0; }
-.ai-project-card__images { position: relative; height: 313px; width: 100%; margin-top: 0; }
+.ai-project-card__images { position: relative; height: 313px; width: 100%; margin-top: 0; overflow: hidden;}
 // Image wrapper uses CSS variables set inline for rotation/scale/translation
 .ai-project-card__img { position: absolute; width: 300px; height: 195px; border-radius: 8px; top: 50%; left: 50%;
 	--img-rotation: 0deg; --img-scale: 1; --img-translate-x: 0; --img-translate-y: 0;

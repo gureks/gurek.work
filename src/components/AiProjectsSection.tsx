@@ -12,7 +12,7 @@ export const AiProjectsSection: React.FC = () => {
   const rightRef = useReveal<HTMLDivElement>();
   const tags = ['OpenAI APIs','RAG Stack','Rapid Prototyping','Gemini','Python','LangChain','LLMs','FAISS','PostgresSQL','Vector Store','QLoras','HeyGen','Supabase','Codex'];
   return (
-    <section className="ai-projects-section" aria-labelledby="ai-projects-heading">
+    <section className="ai-projects-section" aria-labelledby="ai-projects-heading" id="ai-projects">
       <div className="ai-projects-layout">
         <div ref={leftRef} className="ai-projects-left reveal">
           <div className="lines" aria-hidden="true">

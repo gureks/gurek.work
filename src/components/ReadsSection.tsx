@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/global.scss';
 import { readsCarousel, READS_SECTION_ID, ReadItem } from '../data/reads';
-import { iconBook, imgBookCreativeConfidence, imgBookDontBelieve, imgBookEgoEnemy, imgBookFactfulness, imgBookHyperfocus, imgBookShoeDog, imgBookStartWithWhy, imgBookUserFriendly } from '../imageManifest';
+// import { iconBook, imgBookCreativeConfidence, imgBookDontBelieve, imgBookEgoEnemy, imgBookFactfulness, imgBookHyperfocus, imgBookShoeDog, imgBookStartWithWhy, imgBookUserFriendly } from '../imageManifest';
+import { iconBook } from '../imageManifest';
 import { useReveal } from '../hooks/useReveal';
 
 export const ReadsSection: React.FC = () => {
@@ -10,7 +11,7 @@ export const ReadsSection: React.FC = () => {
   // Duplicate items for seamless marquee
   const sequence = [...items, ...items];
   return (
-    <section className="reads-section" id={READS_SECTION_ID} aria-labelledby="reads-heading">
+    <section className="reads-section" aria-labelledby="reads-heading" id="reads">
       <header className="reads-section__header">
         <h2 id="reads-heading" className="visually-hidden">Frameworks I read not just build</h2>
         <p className="reads-section__title" aria-hidden="true">

@@ -18,7 +18,7 @@ export const nudgeConfig: NudgeConfig = {
     { type: 'link', text: 'build in public', href: 'https://letmegooglethat.com/?q=building+in+public/' },
     { type: 'text', text: '. 🔨' }
   ],
-  dismissible: false,
+  dismissible: true,
   role: 'status',
   ariaLabel: 'Announcement: Building in public'
 };

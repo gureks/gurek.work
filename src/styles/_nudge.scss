@@ -2,8 +2,10 @@
 @use 'theme' as *;
 
 .nudge {
-  --nudge-bg: #6c64fe; /* primary solid */
-  background: var(--nudge-bg);
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  background: var(--color-primary);
   color: var(--color-white);
   display: flex;
   align-items: center;
@@ -11,7 +13,7 @@
   gap: $space-md;
   padding: $space-md $space-xl;
   border-radius: 0 0 $radius-card $radius-card;
-  position: relative;
+  // position: relative;
   text-align: center;
   box-shadow: $shadow-glass;
   font-family: $font-sans-geom;
@@ -31,8 +33,8 @@
 
 .nudge__close {
   position: absolute;
-  top: 8px;
-  right: 12px;
+  // top: 8px;
+  right: 20px;
   background: transparent;
   border: none;
   color: var(--color-white);

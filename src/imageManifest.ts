@@ -12,6 +12,7 @@ export { default as iconBuildingProducts } from '../assets/icon/building_product
 export { default as iconGurekSingh } from '../assets/icon/gureksingh.svg';
 export { default as iconHumans } from '../assets/icon/humans.svg';
 export { default as iconMe } from '../assets/icon/me.svg';
+export { default as iconPlay } from '../assets/icon/play.svg';
 export { default as iconSliderHandle } from '../assets/slider_handle.svg';
 
 // AI Projects section assets

@@ -21,7 +21,7 @@ export const BentoDesignProjects: React.FC = () => {
   const midRef = useReveal<HTMLDivElement>();
   const wideRef = useReveal<HTMLDivElement>();
   return (
-    <section className="bento-design-projects" aria-labelledby="bento-heading">
+    <section className="bento-design-projects" aria-labelledby="bento-heading" id="bento-design">
       <header className="bento-design-projects__intro">
         <h2 id="bento-heading" className="visually-hidden">Design Projects</h2>
         <p className="intro-line">
