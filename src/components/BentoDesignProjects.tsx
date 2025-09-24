@@ -4,11 +4,11 @@ import { BeforeAfterSlider } from './BeforeAfterSlider';
 import { Tag } from './Tag';
 import {
   iconArrowUpRight,
-  imgJobCard1,
-  imgJobCard2,
-  imgJobCard3,
-  imgProductReviews,
-  imgBetterHandoffsTop,
+  imgGrowfastBottom,
+  imgGrowfastMiddle,
+  imgGrowfastTop,
+  imgUstraa,
+  imgMercury,
   iconDesigningInterfaces
 } from '../imageManifest';
 import { projectsColumnLeft, projectsColumnMid, projectsColumnWide } from '../data/projects';
@@ -61,9 +61,9 @@ export const BentoDesignProjects: React.FC = () => {
               {p.variant === 'stacked' && (
                 <div className="bento-card__media bento-card__media--stacked" aria-hidden="true">
                   <div className="stacked-images">
-                    <div className="stacked-images__item rotate-left" style={{ backgroundImage: `url(${imgJobCard1})` }} />
-                    <div className="stacked-images__item base" style={{ backgroundImage: `url(${imgJobCard2})` }} />
-                    <div className="stacked-images__item rotate-right" style={{ backgroundImage: `url(${imgJobCard3})` }} />
+                    <div className="stacked-images__item rotate-left" style={{ backgroundImage: `url(${imgGrowfastBottom})` }} />
+                    <div className="stacked-images__item base" style={{ backgroundImage: `url(${imgGrowfastMiddle})` }} />
+                    <div className="stacked-images__item rotate-right" style={{ backgroundImage: `url(${imgGrowfastTop})` }} />
                   </div>
                 </div>
               )}
@@ -83,7 +83,7 @@ export const BentoDesignProjects: React.FC = () => {
               </div>
               {p.variant === 'imageRight' && (
                 <div className="bento-card__media bento-card__media--image-right" aria-hidden="true">
-                  <div className="image-right" style={{ backgroundImage: `url(${imgProductReviews})` }} />
+                  <div className="image-right" style={{ backgroundImage: `url(${imgUstraa})` }} />
                 </div>
               )}
             </article>
@@ -93,7 +93,7 @@ export const BentoDesignProjects: React.FC = () => {
           {projectsColumnWide.map(p => (
             <article key={p.id} className="bento-card bento-card--wide">
               <div className="bento-card__media" aria-hidden="true">
-                <div className="image-top" style={{ backgroundImage: `url(${imgBetterHandoffsTop})` }} />
+                <div className="image-top" style={{ backgroundImage: `url(${imgMercury})` }} />
               </div>
               <div className="bento-card__body">
                 <div className="bento-card__head">

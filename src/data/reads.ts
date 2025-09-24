@@ -1,3 +1,5 @@
+import { imgBookCreativeConfidence, imgBookDontBelieve, imgBookEgoEnemy, imgBookFactfulness, imgBookHyperfocus, imgBookShoeDog, imgBookStartWithWhy, imgBookUserFriendly } from '../imageManifest';
+
 export interface ReadItem {
   id: string;
   title: string; // fallback accessible label
@@ -25,52 +27,36 @@ export const READS_SECTION_ID = 'reads-section';
 const baseReads: ReadItem[] = [
   {
     id: 'read-0', title: 'Framework Reference 0',
-    png: '/figma-assets/0318d832bb2bea1acffab20b7a68ceda21dd081c.png',
-    webp1x: '/figma-assets/optimized/0318d832bb2bea1acffab20b7a68ceda21dd081c-180w.webp',
-    webp2x: '/figma-assets/optimized/0318d832bb2bea1acffab20b7a68ceda21dd081c-360w.webp', alt: ''
-  },
+    png: imgBookCreativeConfidence,
+    alt: 'Cover of the book Creative Confidence by Tom and David Kelley',},
   {
     id: 'read-1', title: 'Framework Reference 1',
-    png: '/figma-assets/57a756d84a3ded6df3c3fa5ba53ce40bf1d7ac76.png',
-    webp1x: '/figma-assets/optimized/57a756d84a3ded6df3c3fa5ba53ce40bf1d7ac76-180w.webp',
-    webp2x: '/figma-assets/optimized/57a756d84a3ded6df3c3fa5ba53ce40bf1d7ac76-360w.webp', alt: ''
-  },
+    png: imgBookDontBelieve,
+    alt: 'Cover of the book Don’t Believe Everything You Think by Thomas E. Brown',},
   {
     id: 'read-2', title: 'Framework Reference 2',
-    png: '/figma-assets/590b70389c10b655dec7bfe4e6797c36f5385cb9.png',
-    webp1x: '/figma-assets/optimized/590b70389c10b655dec7bfe4e6797c36f5385cb9-180w.webp',
-    webp2x: '/figma-assets/optimized/590b70389c10b655dec7bfe4e6797c36f5385cb9-360w.webp', alt: ''
-  },
+    png: imgBookEgoEnemy,
+    alt: 'Cover of the book The Ego Is the Enemy by Ryan Holiday',},
   {
     id: 'read-3', title: 'Framework Reference 3',
-    png: '/figma-assets/7177699d52f9a59a0f8fedece84e34d0d077128b.png',
-    webp1x: '/figma-assets/optimized/7177699d52f9a59a0f8fedece84e34d0d077128b-180w.webp',
-    webp2x: '/figma-assets/optimized/7177699d52f9a59a0f8fedece84e34d0d077128b-360w.webp', alt: ''
-  },
+    png: imgBookFactfulness,
+    alt: 'Cover of the book Factfulness by Hans Rosling',},
   {
     id: 'read-4', title: 'Framework Reference 4',
-    png: '/figma-assets/7183fd4808b9c2d6938eee6ee2c59abc39a68ea9.png',
-    webp1x: '/figma-assets/optimized/7183fd4808b9c2d6938eee6ee2c59abc39a68ea9-180w.webp',
-    webp2x: '/figma-assets/optimized/7183fd4808b9c2d6938eee6ee2c59abc39a68ea9-360w.webp', alt: ''
-  },
+    png: imgBookHyperfocus,
+    alt: 'Cover of the book Hyperfocus by Chris Bailey',},
   {
     id: 'read-5', title: 'Framework Reference 5',
-    png: '/figma-assets/9f8566fe9f21f23fa9b1fd2463180ebd229f4522.png',
-    webp1x: '/figma-assets/optimized/9f8566fe9f21f23fa9b1fd2463180ebd229f4522-180w.webp',
-    webp2x: '/figma-assets/optimized/9f8566fe9f21f23fa9b1fd2463180ebd229f4522-360w.webp', alt: ''
-  },
+    png: imgBookShoeDog,
+    alt: 'Cover of the book Shoe Dog by Phil Knight',},
   {
     id: 'read-6', title: 'Framework Reference 6',
-    png: '/figma-assets/c71eb51acbcae35c15f5f5dbb410de4ed8ec10c1.png',
-    webp1x: '/figma-assets/optimized/c71eb51acbcae35c15f5f5dbb410de4ed8ec10c1-180w.webp',
-    webp2x: '/figma-assets/optimized/c71eb51acbcae35c15f5f5dbb410de4ed8ec10c1-360w.webp', alt: ''
-  },
+    png: imgBookUserFriendly,
+    alt: 'Cover of the book User Friendly by Cliff Kuang and Robert Fabricant',},
   {
     id: 'read-7', title: 'Framework Reference 7',
-    png: '/figma-assets/f50fa8d5f1147d1ae36eb1eefe6d3002c3f851e7.png',
-    webp1x: '/figma-assets/optimized/f50fa8d5f1147d1ae36eb1eefe6d3002c3f851e7-180w.webp',
-    webp2x: '/figma-assets/optimized/f50fa8d5f1147d1ae36eb1eefe6d3002c3f851e7-360w.webp', alt: ''
-  }
+    png: imgBookStartWithWhy,
+    alt: 'Cover of the book Start With Why by Simon Sinek',}
 ];
 
 export function generateReadsData(dupe: number = 2): ReadsCarouselData {

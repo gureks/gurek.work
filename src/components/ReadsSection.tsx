@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/global.scss';
 import { readsCarousel, READS_SECTION_ID, ReadItem } from '../data/reads';
-import { iconBook } from '../imageManifest';
+import { iconBook, imgBookCreativeConfidence, imgBookDontBelieve, imgBookEgoEnemy, imgBookFactfulness, imgBookHyperfocus, imgBookShoeDog, imgBookStartWithWhy, imgBookUserFriendly } from '../imageManifest';
 import { useReveal } from '../hooks/useReveal';
 
 export const ReadsSection: React.FC = () => {
@@ -30,20 +30,14 @@ export const ReadsSection: React.FC = () => {
           <div className="reads-marquee__track">
             {sequence.map((item: ReadItem) => (
               <div key={item.id} className="reads-cover">
-                <picture>
-                  {item.webp1x && item.webp2x && (
-                    <source srcSet={`${item.webp1x} 1x, ${item.webp2x} 2x`} type="image/webp" />
-                  )}
-                  <img
-                    src={item.png}
-                    srcSet={`${item.png} 1x`}
-                    width={180}
-                    height={276}
-                    loading="lazy"
-                    decoding="async"
-                    alt={item.alt || ''}
-                  />
-                </picture>
+                <img
+                  src={item.png}
+                  width={180}
+                  height={276}
+                  loading="lazy"
+                  decoding="async"
+                  alt={item.alt || ''}
+                />
               </div>
             ))}
           </div>

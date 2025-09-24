@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import '../styles/global.scss';
-import { imgBeforeAfterAfter, imgBeforeAfterBefore, imgSliderHandle } from '../imageManifest';
+import { imgEpaperAfter, imgEpaperBefore, iconSliderHandle } from '../imageManifest';
 
 interface BeforeAfterSliderProps {
   beforeSrc?: string;
@@ -15,13 +15,13 @@ interface BeforeAfterSliderProps {
 
 // Accessible before/after image comparison slider
 export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
-  beforeSrc = imgBeforeAfterBefore,
-  afterSrc = imgBeforeAfterAfter,
-  initial = 0.5,
+  beforeSrc = imgEpaperBefore,
+  afterSrc = imgEpaperAfter,
+  initial = 0.25,
   labelBefore = 'Before',
   labelAfter = 'After',
   className = '',
-  snapThreshold = 0.04,
+  snapThreshold = 0.4,
   snapPoints = [0.5]
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -32,7 +32,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
 
   // Snap logic: if near a snap point or ends apply easing
   const applySnap = (v: number) => {
-    const targets = [0.05, 0.95, ...snapPoints];
+    const targets = [0.1, 0.9, ...snapPoints];
     for (const t of targets) {
       if (Math.abs(v - t) <= snapThreshold) return t;
     }
@@ -99,7 +99,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         onPointerDown={onPointerDown}
         style={{ left: `${ratio * 100}%` }}
       >
-  <img src={imgSliderHandle} alt="" aria-hidden="true" loading="lazy" />
+  <img src={iconSliderHandle} alt="" aria-hidden="true" loading="lazy" />
       </div>
       <div className="before-after__labels">
         <span className="before-after__label before" aria-hidden="true">{labelBefore}</span>

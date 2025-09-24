@@ -2,7 +2,7 @@
 @use 'theme' as *;
 
 // Section spacing per Figma (80px vertical, 40px horizontal container side padding applied via layout)
-.reads-section { padding: 80px 40px; position: relative; }
+.reads-section { padding: $space-mega $space-2xl; position: relative; }
 .reads-section__header { display: flex; flex-direction: column; align-items: center; margin-bottom: 40px; }
 
 // Title styling: serif italic (44px) then sans (40px)
@@ -18,8 +18,7 @@
 
 // Cover tile (180 x 276)
 .reads-cover { width: 180px; height: 276px; border-radius: 16px; position: relative; flex-shrink: 0; overflow: hidden; transition: transform .8s cubic-bezier(.25,.6,.3,1), box-shadow .6s ease; }
-.reads-cover picture, .reads-cover img { display: block; width: 100%; height: 100%; }
-.reads-cover img { object-fit: cover; }
+.reads-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .reads-cover::after { content: ''; position: absolute; inset: 0; border: 1px solid var(--color-background); border-radius: 16px; pointer-events: none; }
 .reads-cover:hover { transform: translateY(-6px); box-shadow: 0 8px 24px -8px rgba(0,0,0,0.4); }
 
@@ -29,4 +28,13 @@
   .reads-marquee__track { animation: none; }
   .reads-cover { transition: box-shadow .3s ease; }
   .reads-cover:hover { transform: none; }
+}
+
+@media (max-width: $bp-md) {
+  .reads-section {
+    padding: $space-lg 0px;
+    &__title {
+      gap: 0px;
+    }
+  }
 }
