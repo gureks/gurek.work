@@ -6,8 +6,6 @@ export interface ReadItem {
   // For now we only have the original PNG exported from Figma. After optimization we will
   // populate webp1x/webp2x for <picture> sources. Keeping fields optional to allow gradual rollout.
   png: string;      // required base PNG (public path)
-  webp1x?: string;  // optimized 1x webp (180x276)
-  webp2x?: string;  // optimized 2x webp (360x552)
   alt?: string;     // alt text (if decorative, can be empty string)
   href?: string;    // future link target
 }

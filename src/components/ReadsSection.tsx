@@ -29,7 +29,7 @@ export const ReadsSection: React.FC = () => {
         <div className="reads-marquee__mask">
           <div className="reads-marquee__track">
             {sequence.map((item: ReadItem) => (
-              <div key={item.id} className="reads-cover">
+              <div key={item.id} className="reads-cover" style={{ backgroundImage: `url(${item.png})` }} >
                 <img
                   src={item.png}
                   width={180}

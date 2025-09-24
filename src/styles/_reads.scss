@@ -14,7 +14,7 @@
 // Marquee container (340px high including 32px vertical padding around 276px tiles)
 .reads-marquee { position: relative; height: 340px; display: flex; align-items: center; justify-content: center; }
 .reads-marquee__mask { position: relative; width: 1152px; height: 340px; padding: 32px 0; mask-image: url('../assets/a1e4bdcc41dfec88f69cab9665eb9d2726044a65.svg'); -webkit-mask-image: url('../assets/a1e4bdcc41dfec88f69cab9665eb9d2726044a65.svg'); mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat; mask-size: 1152px 340px; -webkit-mask-size: 1152px 340px; overflow: hidden; }
-.reads-marquee__track { display: flex; gap: 40px; animation: reads-marquee 60s linear infinite; will-change: transform; }
+.reads-marquee__track { display: flex; gap: 40px; animation: reads-marquee 30s linear infinite; will-change: transform; }
 
 // Cover tile (180 x 276)
 .reads-cover { width: 180px; height: 276px; border-radius: 16px; position: relative; flex-shrink: 0; overflow: hidden; transition: transform .8s cubic-bezier(.25,.6,.3,1), box-shadow .6s ease; }

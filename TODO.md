@@ -23,8 +23,8 @@
 [x] Fix borders colors issue rgba to var
 [x] Fix Bento Section Mobile View
 
-[ ] Fix images for naming and manifest
-[ ] Optimize images 
+[x] Fix images for naming and manifest
+[x] Optimize images 
 [ ] Reads Section Scroll Speed
 
 [ ] Before / After Slider Snapping and Opacity 

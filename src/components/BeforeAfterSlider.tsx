@@ -17,11 +17,11 @@ interface BeforeAfterSliderProps {
 export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
   beforeSrc = imgEpaperBefore,
   afterSrc = imgEpaperAfter,
-  initial = 0.25,
+  initial = 0.5,
   labelBefore = 'Before',
   labelAfter = 'After',
   className = '',
-  snapThreshold = 0.4,
+  snapThreshold = 0.1,
   snapPoints = [0.5]
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -99,7 +99,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         onPointerDown={onPointerDown}
         style={{ left: `${ratio * 100}%` }}
       >
-  <img src={iconSliderHandle} alt="" aria-hidden="true" loading="lazy" />
+      <img src={iconSliderHandle} alt="" aria-hidden="true" loading="lazy" />
       </div>
       <div className="before-after__labels">
         <span className="before-after__label before" aria-hidden="true">{labelBefore}</span>
