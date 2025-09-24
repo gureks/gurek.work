@@ -18,7 +18,7 @@ const App = () => {
         <Hero />
         <AiProjectsSection />
         <BentoDesignProjects />
-        <PlaySection />
+        {/* <PlaySection /> */}
         <ReadsSection />
         <Footer />
         <ThemeToggle />

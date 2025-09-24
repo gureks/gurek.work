@@ -16,6 +16,15 @@
 [x] Github + Codex integration
 [x] Go live dockerization
 
+[ ] Fix images for every section 
+[x] Optimize SVGs 
+[ ] Optimize images 
+[x] Fix Theme Toggling 
+[ ] AI Section overflow
+[ ] Fix Bento Section Mobile View
+[ ] Fix Light Mode Colors blending opacity 
+[ ] Fix borders colors issue rgba to var
+
 ### Development - Copilot Recommendations
 [x] Accessibility polish: Decorative media now aria-hidden; single H1 introduced; hidden semantic heading text in Hero.
 [x] Animation refinement (phase 1): Intersection Observer reveal with reduced motion safeguard.
