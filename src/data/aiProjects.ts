@@ -16,9 +16,9 @@ export const aiProjects: AiProjectSpec[] = [
     title: 'AI Avatar System',
     description: 'Trusted Stories, Humanized. Automated anchor-led videos → 80% faster, 60% cheaper',
     images: [
-      { src: imgAvatarLeft, rotation: 15, top: '48%', left: '52%', scale: 1.02, zIndex: 3, hoverScale: 1.06, hoverTranslateX: '2%', hoverTranslateY: '-2%' },
-      { src: imgAvatarMiddle, rotation: -7.5, top: '50%', left: '48%', scale: 0.98, zIndex: 2, hoverScale: 1.04, hoverTranslateX: '-1%', hoverTranslateY: '-1%' },
-      { src: imgAvatarRight, rotation: 0, top: '50%', left: '50%', scale: 1, zIndex: 1, hoverScale: 1.03 }
+      { src: imgAvatarLeft, rotation: -7.5, top: '20%', left: '2%', scale: 1, zIndex: 2, hoverScale: 0.75, hoverTranslateX: '20%', hoverTranslateY: '-30%', hoverRotate: 7.5},
+      { src: imgAvatarMiddle, rotation: 0, top: '40%', left: '25%', scale: 1.25, zIndex: 3, hoverScale: 1.5, hoverTranslateX: '0%', hoverTranslateY: '-10%', hoverRotate: 0 },
+      { src: imgAvatarRight, rotation: 7.5, top: '10%', left: '50%', scale: 1, zIndex: 1, hoverScale: 0.75, hoverTranslateX: '-25%', hoverTranslateY: '-20%', hoverRotate: -7.5 }
     ],
     accent: 'brand-accent-1',
     offset: 1
@@ -28,7 +28,7 @@ export const aiProjects: AiProjectSpec[] = [
     title: 'Times Intelligence Layer',
     description: 'Reusable AI capable of powering summarisation, experiential copilots, real-time generated podcasts & Live TV, and entire knowledge grids',
     images: [
-      { src: imgTilayerMiddle, rotation: 0, top: '50%', left: '50%', scale: 1, zIndex: 1, hoverScale: 1.04 }
+      { src: imgTilayerMiddle, rotation: 0, top: '40%', left: '25%', scale: 1.5, zIndex: 1, hoverScale: 1.5, hoverTranslateX: '0%', hoverTranslateY: '-10%', hoverRotate: 0 }
     ],
     accent: 'primary',
     offset: 2
@@ -38,8 +38,8 @@ export const aiProjects: AiProjectSpec[] = [
     title: 'TIL AI Hackathon Winner 👑',
     description: 'Solo prototype → now in production video tooling stack',
     images: [
-      { src: imgHackathonLeft, rotation: -15, top: '52%', left: '48%', scale: 1.05, zIndex: 2, hoverScale: 1.06, hoverTranslateX: '-1%', hoverTranslateY: '-2%' },
-      { src: imgHackathonRight, rotation: 0, top: '50%', left: '50%', scale: 0.95, zIndex: 1, hoverScale: 1.05, hoverTranslateY: '1%' }
+      { src: imgHackathonLeft, rotation: -15, top: '10%', left: '0%', scale: 1, zIndex: 1, hoverScale: 0.5, hoverTranslateX: '40%', hoverTranslateY: '20%', hoverRotate: 0 },
+      { src: imgHackathonRight, rotation: 0, top: '30%', left: '50%', scale: 1, zIndex: 2, hoverScale: 1.25, hoverTranslateX: '-55%', hoverTranslateY: '-10%', hoverRotate: 0 }
     ],
     accent: 'brand-accent-3',
     offset: 3

@@ -37,26 +37,44 @@ export const AiProjectCard: React.FC<AiProjectCardProps> = ({
       <p className="ai-project-card__desc text-label text-secondary">{description}</p>
       <div className="ai-project-card__images" aria-hidden="true">
         {images.map((img, i) => {
-          const { rotation = 0, scale = 1, translateX = '0', translateY = '0' } = img;
+          const { top='50%', left='50%', rotation = 0, scale = 1, translateX = '0', translateY = '0' } = img;
           // Extend style with CSS custom properties via index signature casting
           const style: React.CSSProperties & Record<string, string> = {
-            top: img.top || '50%',
-            left: img.left || '50%',
-            ['--img-rotation']: rotation + 'deg',
-            ['--img-scale']: scale.toString(),
-            ['--img-translate-x']: translateX,
-            ['--img-translate-y']: translateY,
+            // top: img.top || '50%',
+            // left: img.left || '50%',
+            // transform: `rotate(${rotation}deg) translate(${translateX}, ${translateY}) scale(${scale.toString()})`,
+
             // Hover deltas (defaults neutral)
-            ['--img-hover-scale']: (img.hoverScale ?? 1).toString(),
-            ['--img-hover-translate-x']: img.hoverTranslateX || '0',
-            ['--img-hover-translate-y']: img.hoverTranslateY || '0',
-            ['--img-hover-rotate']: (img.hoverRotate ?? 0) + 'deg'
+            // ['--img-hover-scale']: (img.hoverScale ?? 1).toString(),
+            // ['--img-hover-translate-x']: img.hoverTranslateX || '0',
+            // ['--img-hover-translate-y']: img.hoverTranslateY || '0',
+            // ['--img-hover-rotate']: (img.hoverRotate ?? 0) + 'deg'
           };
+          // generate unique identifier
+          const uid = `hoverable-${i}`;
+
           if (img.zIndex !== undefined) style.zIndex = String(img.zIndex);
           return (
-            <div key={i} className={['ai-project-card__img', img.className].filter(Boolean).join(' ')} style={style}>
+            <React.Fragment key={uid}>
+            <div key={i} data-hover-id={uid} id={uid} className={['ai-project-card__img', img.className].filter(Boolean).join(' ')} style={style}>
               <div className="ai-project-card__img-inner" style={{ backgroundImage: `url(${img.src})` }} />
             </div>
+            <style>
+                {`
+                  .${accentClass[accent]} [data-hover-id="${uid}"] {
+                    transition: transform 1s ease;
+                    top: ${img.top || '50%'};
+                    left: ${img.left || '50%'};
+                    transform: rotate(${rotation}deg) translate(${translateX}, ${translateY}) scale(${scale.toString()});
+                  }
+                  .${accentClass[accent]}:hover [data-hover-id="${uid}"] {
+                    transform: rotate(${img.hoverRotate}deg)
+                              translate(${img.hoverTranslateX || '0'}, ${img.hoverTranslateY || '0'})
+                              scale(${(img.hoverScale ?? 1).toString()});
+                  }
+                `}
+              </style>
+            </React.Fragment>
           );
         })}
       </div>
