@@ -30,12 +30,12 @@
 
 // Reuse ticker mask (fallback to fade gradient if mask unsupported)
 .play-carousel__mask {
-  mask-image: url('../assets/a1e4bdcc41dfec88f69cab9665eb9d2726044a65.svg');
-  -webkit-mask-image: url('../assets/a1e4bdcc41dfec88f69cab9665eb9d2726044a65.svg');
+  mask-image: url('../assets/gradient_mask.svg');
+  -webkit-mask-image: url('../assets/gradient_mask.svg');
   mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat; mask-size: cover; -webkit-mask-size: cover;
 }
-@supports not (mask-image: url('../assets/a1e4bdcc41dfec88f69cab9665eb9d2726044a65.svg')) {
-  .play-carousel__mask::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, var(--color-background) 0%, var(--color-surface) 10%, var(--color-surface) 90%, var(--color-background) 100%); }
+@supports not (mask-image: url('../assets/gradient_mask.svg')) {
+  .play-carousel__mask::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%); }
 }
 
 .play-carousel__track { display: flex; gap: $space-lg; width: max-content; padding: 0; }

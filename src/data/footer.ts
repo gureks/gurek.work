@@ -1,3 +1,5 @@
+import { iconGurekSingh } from '../imageManifest';
+
 export interface FooterCta {
   id: string;
   label: string;
@@ -27,7 +29,7 @@ export interface FooterConfig {
 }
 
 // Assets from Figma export placed in public/figma-assets/footer
-const HEADSHOT = '/figma-assets/footer/0515dc41cbda2b3b9eebbad61862f293f9aa4d96.svg';
+const HEADSHOT = iconGurekSingh;
 
 export const footerConfig: FooterConfig = {
   heading: {

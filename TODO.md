@@ -30,6 +30,8 @@
 
 [ ] Before / After Slider Snapping and Opacity 
 [ ] AI Section overflow
+[ ] AI images position
+[x] mask image 
 
 ### Development - Copilot Recommendations
 [x] Accessibility polish: Decorative media now aria-hidden; single H1 introduced; hidden semantic heading text in Hero.
