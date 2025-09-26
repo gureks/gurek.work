@@ -1,60 +1,179 @@
 @use 'tokens' as *;
-@use 'theme' as *;;
+@use 'theme' as *;
+;
 @use 'sass:math';
 
 // AI Project Card refinements
-.ai-project-card { position: relative; padding: 32px 32px 0; border-radius: $radius-card; background: var(--color-background); transition: transform .5s cubic-bezier(.4,.2,.2,1), box-shadow .5s ease, background .5s ease; }
-.ai-project-card__head { display: flex; align-items: flex-start; justify-content: space-between; gap: $space-sm; }
-.ai-project-card__title { margin: 0; }
-.ai-project-card__icon { width: 32px; height: 32px; border-radius: 9999px; background: var(--color-text-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; img { width: 24px; height: 24px; } }
-.ai-project-card__desc { margin: 8px 0 0; }
-.ai-project-card__images { position: relative; height: 313px; width: 100%; margin-top: 0; overflow: hidden;}
+.ai-project-card {
+	position: relative;
+	border-radius: $radius-card;
+	background: var(--color-background);
+	transition: transform .5s cubic-bezier(.4, .2, .2, 1), box-shadow .5s ease, background .5s ease;
+}
+
+.ai-project-card__head {
+	display: flex;
+	padding: $space-xl $space-xl 0;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: $space-sm;
+}
+
+.ai-project-card__title {
+	margin: 0;
+}
+
+.ai-project-card__icon {
+	width: 32px;
+	height: 32px;
+	border-radius: 9999px;
+	background: var(--color-text-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+
+	img {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.ai-project-card__desc {
+	margin: 8px 0 0;
+}
+
+.ai-project-card__images {
+	position: relative;
+	height: 313px;
+	width: 100%;
+	margin-top: 0;
+	overflow: hidden;
+}
+
 // Image wrapper uses CSS variables set inline for rotation/scale/translation
-.ai-project-card__img { position: absolute; width: 300px; height: 195px; border-radius: 8px; 
+.ai-project-card__img {
+	position: absolute;
+	width: 300px;
+	height: 195px;
+	border-radius: 8px;
 	will-change: transform;
 }
-.ai-project-card__img-inner { position: relative; width: 100%; height: 100%; background-size: cover; background-position: center; border-radius: 8px;
-	&::after { content: ''; position: absolute; inset: -8px; border: 8px solid var(--color-border-glass); border-radius: 16px; pointer-events: none; transition: border-color .5s ease, box-shadow .6s ease; }
+
+.ai-project-card__img-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	border-radius: 8px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: -8px;
+		border: 8px solid var(--color-border-glass);
+		border-radius: 16px;
+		pointer-events: none;
+		transition: border-color .5s ease, box-shadow .6s ease;
+	}
 }
-.ai-project-card__border { position: absolute; inset: 0; border: 2px solid var(--color-border-glass); border-radius: $radius-card; pointer-events: none; }
+
+.ai-project-card__border {
+	position: absolute;
+	inset: 0;
+	border: 2px solid var(--color-border-glass);
+	border-radius: $radius-card;
+	pointer-events: none;
+}
 
 // Accent modifiers
-.ai-project-card--accent-primary { background-color: var(--color-surface-glass); .ai-project-card__img-inner::after { border-color: var(--color-border-glass); } .ai-project-card__border { border-color: var(--color-border-glass); } }
-.ai-project-card--accent-1 { background-color: var(--color-accent-1-surface-bg); .ai-project-card__img-inner::after { border-color: var(--color-accent-1-surface-border); } .ai-project-card__border { border-color: var(--color-accent-1-surface-border); } }
-.ai-project-card--accent-2 { background-color: var(--color-accent-2-surface-bg); .ai-project-card__img-inner::after { border-color: var(--color-accent-2-surface-border); } .ai-project-card__border { border-color: var(--color-accent-2-surface-border); } }
-.ai-project-card--accent-3 { background-color: var(--color-accent-3-surface-bg); .ai-project-card__img-inner::after { border-color: var(--color-accent-3-surface-border); } .ai-project-card__border { border-color: var(--color-accent-3-surface-border); } }
+.ai-project-card--accent-primary {
+	background-color: var(--color-surface-glass);
+
+	.ai-project-card__img-inner::after {
+		border-color: var(--color-border-glass);
+	}
+
+	.ai-project-card__border {
+		border-color: var(--color-border-glass);
+	}
+}
+
+.ai-project-card--accent-1 {
+	background-color: var(--color-accent-1-surface-bg);
+
+	.ai-project-card__img-inner::after {
+		border-color: var(--color-accent-1-surface-border);
+	}
+
+	.ai-project-card__border {
+		border-color: var(--color-accent-1-surface-border);
+	}
+}
+
+.ai-project-card--accent-2 {
+	background-color: var(--color-accent-2-surface-bg);
+
+	.ai-project-card__img-inner::after {
+		border-color: var(--color-accent-2-surface-border);
+	}
+
+	.ai-project-card__border {
+		border-color: var(--color-accent-2-surface-border);
+	}
+}
+
+.ai-project-card--accent-3 {
+	background-color: var(--color-accent-3-surface-bg);
+
+	.ai-project-card__img-inner::after {
+		border-color: var(--color-accent-3-surface-border);
+	}
+
+	.ai-project-card__border {
+		border-color: var(--color-accent-3-surface-border);
+	}
+}
 
 // Hover & focus states (keyboard accessible using :focus-within for now if interactive children added later)
 .ai-project-card {
+
 	// &:hover, &:focus-within { transform: translateY(-8px); }
 	// Per-image hover using its custom hover variables
-	&:hover .ai-project-card__img, &:focus-within .ai-project-card__img {
+	&:hover .ai-project-card__img,
+	&:focus-within .ai-project-card__img {
 		// transform: translate(calc(-50% + var(--img-translate-x) + var(--img-hover-translate-x)), calc(-50% + var(--img-translate-y) + var(--img-hover-translate-y))) rotate(calc(var(--img-rotation) + var(--img-hover-rotate))) scale(calc(var(--img-scale) * var(--img-hover-scale)));
 	}
+
 	&.ai-project-card--accent-1:hover .ai-project-card__border,
 	&.ai-project-card--accent-1:focus-within .ai-project-card__border,
-	&.ai-project-card--accent-1:hover .ai-project-card__img-inner::after{ 
-		border-color: var(--color-accent-1); 
-		box-shadow: 0 0 40px var(--color-accent-1); 
+	&.ai-project-card--accent-1:hover .ai-project-card__img-inner::after {
+		border-color: var(--color-accent-1);
+		box-shadow: 0 0 40px var(--color-accent-1);
 	}
+
 	&.ai-project-card--accent-primary:hover .ai-project-card__border,
 	&.ai-project-card--accent-primary:focus-within .ai-project-card__border,
-	&.ai-project-card--accent-primary:hover .ai-project-card__img-inner::after { 
-		border-color: var(--color-primary); 
+	&.ai-project-card--accent-primary:hover .ai-project-card__img-inner::after {
+		border-color: var(--color-primary);
 		box-shadow: 0 0 40px var(--color-primary);
 	}
+
 	&.ai-project-card--accent-2:hover .ai-project-card__border,
 	&.ai-project-card--accent-2:focus-within .ai-project-card__border,
-	&.ai-project-card--accent-2:hover .ai-project-card__img-inner::after{ 
-		border-color: var(--color-accent-2); 
-		box-shadow: 0 0 40px var(--color-accent-2); 
+	&.ai-project-card--accent-2:hover .ai-project-card__img-inner::after {
+		border-color: var(--color-accent-2);
+		box-shadow: 0 0 40px var(--color-accent-2);
 	}
+
 	&.ai-project-card--accent-3:hover .ai-project-card__border,
 	&.ai-project-card--accent-3:focus-within .ai-project-card__border,
-	&.ai-project-card--accent-3:hover .ai-project-card__img-inner::after{ 
-		border-color: var(--color-accent-3); 
-		box-shadow: 0 0 40px var(--color-accent-3); 
+	&.ai-project-card--accent-3:hover .ai-project-card__img-inner::after {
+		border-color: var(--color-accent-3);
+		box-shadow: 0 0 40px var(--color-accent-3);
 	}
+
 	// &:hover .ai-project-card__img-inner::after,
 	// &:focus-within .ai-project-card__img-inner::after {
 	// 	border-color: transparent;
@@ -63,15 +182,28 @@
 
 // Reduced motion preference: remove translateY elevation & heavy scaling
 @media (prefers-reduced-motion: reduce) {
-	.ai-project-card { transition: background .4s ease, box-shadow .4s ease; }
-	.ai-project-card__img { transition: none; }
-	.ai-project-card:hover, .ai-project-card:focus-within { transform: none; }
-	.ai-project-card:hover .ai-project-card__img, .ai-project-card:focus-within .ai-project-card__img { transform: translate(calc(-50% + var(--img-translate-x)), calc(-50% + var(--img-translate-y))) rotate(var(--img-rotation)) scale(var(--img-scale)); }
+	.ai-project-card {
+		transition: background .4s ease, box-shadow .4s ease;
+	}
+
+	.ai-project-card__img {
+		transition: none;
+	}
+
+	.ai-project-card:hover,
+	.ai-project-card:focus-within {
+		transform: none;
+	}
+
+	.ai-project-card:hover .ai-project-card__img,
+	.ai-project-card:focus-within .ai-project-card__img {
+		transform: translate(calc(-50% + var(--img-translate-x)), calc(-50% + var(--img-translate-y))) rotate(var(--img-rotation)) scale(var(--img-scale));
+	}
 }
 
 @media (max-width: $bp-md) {
-	.ai-project-card  {
-    width: 100%;
-	padding: $space-lg $space-lg 0;
-  }
+	.ai-project-card {
+		width: 100%;
+		padding: $space-lg $space-lg 0;
+	}
 }

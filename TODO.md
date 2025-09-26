@@ -29,8 +29,10 @@
 [x] Before / After Slider Snapping
 
 [ ] Before / After Slider Snapping and Opacity 
-[ ] AI Section overflow
-[ ] AI images position
+[x] AI Section overflow restructure
+[x] AI images sizing variables
+[ ] Mobile sticky behaviour
+[x] AI images variables
 [x] mask image 
 
 ### Development - Copilot Recommendations

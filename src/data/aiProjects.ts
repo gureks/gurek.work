@@ -38,8 +38,8 @@ export const aiProjects: AiProjectSpec[] = [
     title: 'TIL AI Hackathon Winner 👑',
     description: 'Solo prototype → now in production video tooling stack',
     images: [
-      { src: imgHackathonLeft, rotation: -15, top: '10%', left: '0%', scale: 1, zIndex: 1, hoverScale: 0.5, hoverTranslateX: '40%', hoverTranslateY: '20%', hoverRotate: 0 },
-      { src: imgHackathonRight, rotation: 0, top: '30%', left: '50%', scale: 1, zIndex: 2, hoverScale: 1.25, hoverTranslateX: '-55%', hoverTranslateY: '-10%', hoverRotate: 0 }
+      { src: imgHackathonLeft, rotation: -15, top: '10%', left: '10%', width: '268px', height: '275px', scale: 1, zIndex: 1, hoverScale: 0.5, hoverTranslateX: '40%', hoverTranslateY: '20%', hoverRotate: 0 },
+      { src: imgHackathonRight, rotation: 0, top: '20%', left: '40%', width: '300px', height: '424px', scale: 1, zIndex: 2, hoverScale: 1.1, hoverTranslateX: '-35%', hoverTranslateY: '-5%', hoverRotate: 0 }
     ],
     accent: 'brand-accent-3',
     offset: 3

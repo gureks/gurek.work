@@ -29,12 +29,14 @@ export const AiProjectCard: React.FC<AiProjectCardProps> = ({
   return (
     <div className={classes}>
       <div className="ai-project-card__head">
-        <h3 className="h-card-title ai-project-card__title">{title}</h3>
+        <div className="container">
+          <h3 className="h-card-title ai-project-card__title">{title}</h3>
+          <p className="ai-project-card__desc text-label text-secondary">{description}</p>
+        </div>
         <div className="ai-project-card__icon" aria-hidden="true">
           <img src={iconArrowUpRight} alt="" loading="lazy" />
         </div>
       </div>
-      <p className="ai-project-card__desc text-label text-secondary">{description}</p>
       <div className="ai-project-card__images" aria-hidden="true">
         {images.map((img, i) => {
           const { top='50%', left='50%', rotation = 0, scale = 1, translateX = '0', translateY = '0' } = img;
@@ -63,6 +65,8 @@ export const AiProjectCard: React.FC<AiProjectCardProps> = ({
                 {`
                   .${accentClass[accent]} [data-hover-id="${uid}"] {
                     transition: transform 1s ease;
+                    width: ${img.width || '300px'};
+                    height: ${img.height || '195px'};
                     top: ${img.top || '50%'};
                     left: ${img.left || '50%'};
                     transform: rotate(${rotation}deg) translate(${translateX}, ${translateY}) scale(${scale.toString()});
